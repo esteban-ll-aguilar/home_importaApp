@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Infrastructure Service</title>
-    <link rel="stylesheet" href="pruebas/styles.css">
-    <link rel="icon" href="pruebas/images/logo.png" type="image/png">
+    <!-- <link rel="stylesheet" href="pruebas/styles.css"> -->
+    <link rel="icon" href="images/logo.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -95,19 +95,24 @@
         }
 
         header {
+            position: fixed;
+            /* Agrega esta línea para que el encabezado se mantenga fijo */
+            top: 0;
+            /* Fija el encabezado en la parte superior */
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 20px;
-            /* Espacio superior */
+            padding-top: 0px;
             padding-right: 30px;
-            /* Espacio a la derecha */
             padding-bottom: 0;
-            /* Sin espacio inferior */
             padding-left: 20px;
-            /* Espacio a la izquierda */
             color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo semitransparente */
         }
+
 
 
         .logo {
@@ -118,7 +123,7 @@
         .logo img {
             width: 150px;
             /* Nuevo ancho para el logo */
-            height: 200px;
+            height: 120px;
             /* Nueva altura para el logo */
             margin-right: 20px;
         }
@@ -146,7 +151,7 @@
             align-items: center;
             width: 100%;
             /* Usar todo el ancho disponible */
-            height: 400px;
+            height: 800px;
             /* Dar una altura fija */
             position: relative;
             /* Para posicionamiento absoluto de los h1 */
@@ -231,29 +236,136 @@
             border-radius: 10px;
         }
 
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-                /* Comienza desde la posición inicial */
-            }
+        .cotiza-container {
+            padding: 0 120px;
+            /* Padding de 50px a la izquierda y derecha */
+            text-align: center;
+            /* Centra el botón */
+        }
 
-            33.33% {
-                transform: translateX(0);
-                /* Mantiene la primera posición durante 4s */
-            }
+        .cotiza-button {
+            display: inline-flex;
+            /* Para que el contenedor ocupe solo el ancho del contenido */
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px;
+            /* Padding interno del botón */
+            background-color: red;
+            color: white;
+            border: 10px solid red;
+            border-radius: 15px;
+        }
 
-            66.66% {
-                transform: translateX(-33.33%);
-                /* Se desplaza al segundo cajón durante 4s */
-            }
+        .cotiza-button img {
+            width: 220px;
+            /* Tamaño de la imagen */
+            height: 220px;
+            margin-right: 10px;
+        }
 
-            100% {
-                transform: translateX(-66.66%);
-                /* Se desplaza al tercer cajón durante 4s */
-            }
+        .cotiza-button span {
+            font-size: 1.9rem;
+            /* Tamaño del texto */
+        }
+
+        .container_l {
+            display: flex;
+            align-items: center;
+            position: relative;
+            max-height: 400px;
+        }
+
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            /* Tamaño de la flecha */
+            color: #333;
+            /* Color de la flecha */
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        .left {
+            left: 10px;
+        }
+
+        .right {
+            right: 10px;
+        }
+
+        .carousel-primary {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
 
+
+        .container_l .carousel-primary a img {
+            width: 300px;
+            /* Tamaño deseado de ancho para las imágenes */
+            height: auto;
+            /* Mantiene la proporción de las imágenes */
+            object-fit: contain;
+            /* Asegura que la imagen se ajuste dentro del contenedor sin ser recortada */
+            margin: auto;
+            align-items: center;
+            /* Centra la imagen dentro de su contenedor flex (el enlace `a`) */
+        }
+
+        #carrusel-caja {
+            width: 100%;
+            /* Ajuste para que coincida con el ancho del contenedor padre */
+            height: 500px;
+            overflow: hidden;
+            /* Para asegurar que solo se muestren tres imágenes a la vez */
+            position: relative;
+            /* Posicionamiento relativo para contener absolutamente el #carrusel-contenido */
+        }
+
+        #carrusel-contenido {
+            display: flex;
+            /* Usamos flex para alinear los elementos del carrusel */
+            width: calc(100%);
+            /* 3 veces el ancho total, ya que cada imagen es 100% del contenedor visible */
+            position: absolute;
+            /* Para animar su posición */
+            animation: automatizacion 15s infinite linear;
+            /* Mantiene la misma duración pero con animación continua */
+        }
+
+        .carrusel-elemento {
+            width: 33.333%;
+            /* Mantiene el ancho para 3 imágenes lado a lado */
+            float: left;
+            /* Asegura que los elementos se alineen horizontalmente */
+        }
+
+        @keyframes automatizacion {
+            0% {
+                margin-left: 0%;
+            }
+
+            33.33% {
+                margin-left: -100%;
+            }
+
+            /* Transición suave a la segunda imagen */
+            66.66% {
+                margin-left: -200%;
+            }
+
+            /* Transición suave a la tercera imagen */
+            100% {
+                margin-left: 0%;
+            }
+
+            /* Vuelve al inicio para una transición continua */
+        }
 
         /* Media Queries */
         @media screen and (max-width: 768px) {
@@ -281,6 +393,8 @@
                 max-width: 300px;
                 /* Un máximo para evitar que sea demasiado grande */
             }
+
+
 
             .planet-container {
                 flex-direction: column-reverse;
@@ -320,6 +434,7 @@
 
 
 
+
         }
 
         @media screen and (max-width: 480px) {
@@ -333,6 +448,40 @@
                 font-size: 1.2em;
             }
         }
+
+
+        @keyframes scroll-horizontal {
+            0% {
+                left: 100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        .carousel-primary:hover,
+        .carousel-primary:hover~.carousel-secondary {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            -o-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+
+        .carousel-secondary:hover {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            -o-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+
+
+        .scroll-container:hover>.carousel-primary:not(:hover) {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            -o-animation-play-state: paused;
+            animation-play-state: paused;
+        }
     </style>
 </head>
 
@@ -342,9 +491,9 @@
         <div class="logo">
             <img src="images/logo_1.png" alt="Company Logo" style="width: 170px; height: 170px;">
             <h1>Importa App</h1>
-            <h1 style="padding-left: 250px; font-size: 1.7rem;">Estamos: 24/7</h1>
+            <h1 style="padding-left: 210px; font-size: 1.7rem;">Estamos: 24/7</h1>
             <a href="https://api.whatsapp.com/send?phone=593980029920" target="_blank"
-                style="display: flex; align-items: center; padding-left: 180px; text-decoration: none; color: white;">
+                style="display: flex; align-items: center; padding-left: 170px; text-decoration: none; color: white;">
                 <img src="images/whatsapp_logo.png" alt="WhatsApp Logo"
                     style="width: 60px; height: 60px; margin-right: 10px;">
                 <strong>+593 98 002 9920</strong>
@@ -353,7 +502,8 @@
 
 
         </div>
-        <a href="https://app.importaapp.com/" class="login-button">Login</a>
+        <a href="https://app.importaapp.com/" class="login-button"><strong>Login</strong></a>
+
     </header>
 
 
@@ -374,14 +524,21 @@
     </div>
 
     <div class="slogan-container"
-        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: center; align-items: center; padding: 150px 0;">
-        IMPORTA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto
-    </div>
-    <div class="slogan-container"
-        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 20px 0; padding-left: 40px; font-weight: bold;">
-        Beneficios
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: center; align-items: center; padding: 150px 0; font-weight: bold;">
+        <strong>IMPORTA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto</strong>
     </div>
 
+    <div class="cotiza-container"
+        onclick="window.location.href='https://app.importaapp.com/forms/contact-form?fbclid=IwAR2JhWHHNFnQ3497QrzmXRNlekXGeXDmklx2Lq8luSw35_1mBvjtSlkns6M';">
+        <div class="cotiza-button">
+            <img src="images/logo_1.png" alt="Logo" style="width: 120px; height: 120px; margin-right: 10px;">
+            <span><strong>Cotiza ahora</strong></span>
+        </div>
+    </div>
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
+        Beneficios
+    </div>
 
 
     <!-- TODO: Cajones -->
@@ -431,6 +588,118 @@
             </div>
         </div>
     </div>
+
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: center; align-items: center; padding: 150px 0; font-weight: bold;">
+        <strong>Propuesta de valor: Somos tu departamento de comercio de exterior</strong>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+        <div class="cotiza-container" onclick="window.location.href='form_w.html';">
+            <div class="cotiza-button">
+                <img src="images/logo_1.png" alt="Logo" style="width: 120px; height: 120px; margin-right: 10px;">
+                <span><strong>Importador / Exportador</strong></span>
+            </div>
+        </div>
+
+        <div class="cotiza-container" onclick="window.location.href='form_operator_log.html';">
+            <div class="cotiza-button">
+                <img src="images/logo_work.png" alt="Logo" style="width: 120px; height: 120px; margin-right: 10px;">
+                <span><strong>Aliado Operador</strong></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
+        Nuestros colaboradores
+    </div>
+
+
+
+
+
+
+
+    <div class="container_l">
+        <div class="arrow left" onclick="moveSlide('prev')">&#10094;</div> <!-- Flecha izquierda -->
+        <div class="carousel-primary">
+            <a href=""><img src="logos/conect_america.png" alt="logo1" /></a>
+            <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img
+                    src="logos/embajada_china_logo.png" alt="logo2" /></a>
+            <a
+                href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img
+                    src="logos/emprelatam_logo.png" alt="logo3" /></a>
+            <a
+                href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img
+                    src="logos/endeavor_logo.png" alt="logo4" /></a>
+            <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img
+                    src="logos/forbes_logo.png" alt="logo5" /></a>
+            <a href="https://connectamericas.com/company/importa"><img src="logos/conect_america.png" alt="logo1" /></a>
+            <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img
+                    src="logos/embajada_china_logo.png" alt="logo2" /></a>
+            <a
+                href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img
+                    src="logos/emprelatam_logo.png" alt="logo3" /></a>
+            <a
+                href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img
+                    src="logos/endeavor_logo.png" alt="logo4" /></a>
+            <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img
+                    src="logos/forbes_logo.png" alt="logo5" /></a>
+        </div>
+        <div class="arrow right" onclick="moveSlide('next')">&#10095;</div> <!-- Flecha derecha -->
+    </div>
+
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
+        Nuestros colaboradores
+    </div>
+
+    <div id="carrusel-contenido">
+        <div id="carrusel-caja">
+            <div class="carrusel-elemento">
+                <img class="imagenes" src="logos/emprelatam_logo.png">
+            </div>
+            <div class="carrusel-elemento">
+                <img class="imagenes" src="logos/emprelatam_logo.png">
+            </div>
+            <div class="carrusel-elemento">
+                <img class="imagenes" src="logos/emprelatam_logo.png">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <a href="https://importaapp.com"
+            style="color: white; text-decoration: none; display: block; margin-bottom: 20px;">www.importaapp.com</a>
+        <a href="mailto:hola@importaapp.com"
+            style="color: white; text-decoration: none; display: block; margin-bottom: 20px;">hola@importaapp.com</a>
+        <a href="https://api.whatsapp.com/send?phone=593980029920"
+            style="color: white; text-decoration: none; display: block;">Móvil: +593 098 002 9920</a>
+        <p>Cuenca - Quito - Ecuador</p>
+        <p>Operamos en estos países</p>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <img src="images/ecuador_logo.png" alt="Ecuador Flag"
+                style="width: 120px; height: auto; border-radius: 5px; margin-right: 20px;">
+            <img src="images/colombia_logo.png" alt="Colombia Flag"
+                style="width: 120px; height: auto; border-radius: 5px; margin-right: 20px;">
+            <img src="images/china_logo.png" alt="China Flag"
+                style="width: 120px; height: auto; border-radius: 5px; margin-right: 20px;">
+            <img src="images/usa_logo.png" alt="USA Flag" style="width: 120px; height: auto; border-radius: 5px;">
+        </div>
+    </footer>
+
+
 
 
 
