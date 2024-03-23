@@ -1,63 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carousel de Logos</title>
-<style>
-    body {
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    *,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-.carousel-container {
-  width: 100%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
-.carousel {
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #333;
+
+}
+
+.container {
   display: flex;
-  animation: carousel-animation 20s linear infinite;
+  height: 100vh;
+  width: 100%;
+  
 }
 
-.logo {
-  width: 150px;
-  margin: 0 10px;
+.header {
+  text-align: center;
+  width: 100%;
+  padding-top: 80px;
+
 }
 
-@keyframes carousel-animation {
+.scroll-container {
+  height: 100vh;
+}
+
+.carousel-primary,
+.carousel-secondary {
+  top: 26%;
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.carousel-primary img,
+.carousel-secondary img {
+    width: 80%;
+    height: 100px;
+    margin: 0 20px;
+    transition: transform 0.5s;
+    object-fit:scale-down;
+}
+
+
+.carousel-primary {
+  display: flex;
+
+  justify-content: space-around;
+  animation: scroll-horizontal 20s linear infinite;
+}
+.carousel-primary a {
+  width: 100%;
+  display: inline-block;
+}
+
+
+.carousel-secondary {
+  animation: scroll-horizontal 20s linear infinite;
+  animation-delay: 10s;
+}
+
+@keyframes scroll-horizontal {
   0% {
-    transform: translateX(0);
+    left: 100%;
   }
+
   100% {
-    transform: translateX(-800px); /* Ajusta el valor según la cantidad de logos */
+    left: -100%;
   }
 }
 
-</style>
+.carousel-primary:hover,
+.carousel-primary:hover~.carousel-secondary {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.carousel-secondary:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+
+.scroll-container:hover>.carousel-primary:not(:hover) {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+  </style>
 </head>
+
+
 <body>
-<div class="carousel-container">
-  <div class="carousel">
-    <div class="logo"><img src="logo1.png" alt="Logo 1"></div>
-    <div class="logo"><img src="logo2.png" alt="Logo 2"></div>
-    <div class="logo"><img src="logo3.png" alt="Logo 3"></div>
-    <div class="logo"><img src="logo4.png" alt="Logo 4"></div>
-    <div class="logo"><img src="logo5.png" alt="Logo 5"></div>
+  <div class="container">
+    <div class="header">
+      <h2>Nuestros colaboradores</h2>
+    </div>
+    <div class="carousel-primary">
+        <a href=""><img src="logos/conect_america.png" alt="logo1" /></a>
+        <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img src="logos/embajada_china_logo.png" alt="logo2" /></a>
+        <a href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img src="logos/emprelatam_logo.png" alt="logo3" /></a>
+        <a href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img src="logos/endeavor_logo.png" alt="logo4" /></a>
+        <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img src="logos/forbes_logo.png" alt="logo5" /></a>
+      </div>
+      <div class="carousel-primary carousel-secondary">
+        <a href="https://connectamericas.com/company/importa"><img src="logos/conect_america.png" alt="logo1" /></a>
+        <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img src="logos/embajada_china_logo.png" alt="logo2" /></a>
+        <a href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img src="logos/emprelatam_logo.png" alt="logo3" /></a>
+        <a href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img src="logos/endeavor_logo.png" alt="logo4" /></a>
+        <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img src="logos/forbes_logo.png" alt="logo5" /></a>
+      </div>
   </div>
-</div>
-<script>
-    // Opcional: Detener la animación al hacer hover sobre el carrusel
-    const carousel = document.querySelector('.carousel');
-    carousel.addEventListener('mouseover', () => {
-    carousel.style.animationPlayState = 'paused';
-    });
-    carousel.addEventListener('mouseout', () => {
-    carousel.style.animationPlayState = 'running';
-    });
-
-</script>
-
 </body>
+
 </html>
