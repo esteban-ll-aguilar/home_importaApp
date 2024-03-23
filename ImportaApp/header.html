@@ -1,40 +1,123 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="images/Perfil_importaapp1.png" type="image/png">
+    <title>Payment Infrastructure Service</title>
+    <link rel="stylesheet" href="pruebas/styles.css">
+    <link rel="icon" href="pruebas/images/Perfil_importaapp1.png" type="image/png">
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #ffffff, #FF0000, #000000, #FF0000, #000000);
+            background-size: 400% 400%;
+            animation: moveGradient 4s linear infinite;
+        }
+
+        @keyframes moveGradient {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
         header {
-            color: #fff;
-            text-align: justify;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            color: white;
         }
-        header img {
-            width: 200px;
+
+        .logo {
+            display: flex;
+            align-items: center;
         }
-        header a {
-            background-color: #e5172a;
+
+        .planet {
+            display: flex;
+            justify-content: flex-end;
+            /* Alinea el contenido a la derecha */
+            align-items: center;
+            width: 100%;
+            /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+        }
+
+        .logo img {
+            width: 100px;
+            /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto;
+            margin-right: 20px;
+            /* Espacio entre la imagen y el texto */
+        }
+
+        .planet img {
+            width: 600px;
+            /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto;
+            /* No necesitas margin-right aquí ya que quieres que la imagen esté a la derecha */
+        }
+
+        .login-button {
+            padding: 20px 70px;
+            background-color: #595050;
+            color: rgb(255, 255, 255);
             text-decoration: none;
-            color: #fff;
-            padding: 10px 20px;
             border-radius: 10px;
-            font-size: 20px;
-            margin-left: 20px;
         }
-        header a:hover {
-            background-color: #fe4c1c;
+
+        .red-bg {
+            background-color: red;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 80%;
+            /* Ajusta el ancho del div del planeta */
+            height: 200px;
+            /* Ajusta la altura del div del planeta */
+        }
+
+        .red-bg img {
+            width: 150px;
+            /* ajusta el tamaño de la imagen según sea necesario */
+            height: auto;
+            margin-left: 20px;
+            /* Espacio entre la imagen y el borde del div */
         }
     </style>
 </head>
+
 <body>
     <header>
-        <img src="images/Logo Blanco letra negra.png" alt="Logo">
-        <a href="https://app.importaapp.com/">Login</a>
+        <div class="logo">
+            <img src="images/logo_1.png" alt="Company Logo">
+            <h1>Importa App</h1>
+        </div>
+        <a href="https://app.importaapp.com/" class="login-button">Login</a>
     </header>
-</body>
-</html>
+    <div class="animated-bg"></div>
 
+    <!-- Div con fondo rojo y imagen a la derecha -->
+    <div class="planet">
+        <img src="images/planet.png" alt="Planet Image">
+    </div>
+</body>
+
+</html>

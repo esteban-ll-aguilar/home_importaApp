@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Infrastructure Service</title>
+    <link rel="stylesheet" href="pruebas/styles.css">
+    <link rel="icon" href="pruebas/images/logo.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        header,
+        .planet-container {
+            position: relative;
+
+            /* Importante para el posicionamiento del fondo animado */
+        }
+
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Colocar detrás del contenido */
+            background: linear-gradient(45deg, #ffffff, #FF0000, #000000, #FF0000, #000000);
+            background-size: 400% 400%;
+            animation: moveGradient 4s linear infinite;
+        }
+
+        .animated-bg-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to right, #000000, #FF0000, #000000, #FF0000, #000000);
+            background-size: 400% 100%;
+            /* Ajustar solo el ancho del gradiente */
+            animation: moveGradientHeader 6s linear infinite;
+            /* Cambiar la duración de la animación */
+        }
+
+        .animated-bg-planet {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to right, #000000, #FF0000, #000000, #FF0000, #000000);
+            background-size: 400% 100%;
+            /* Ajustar solo el ancho del gradiente */
+            animation: moveGradientPlanet 6s linear infinite;
+            /* Cambiar la duración de la animación */
+        }
+
+        @keyframes moveGradientHeader {
+            100% {
+                background-position: 0 0;
+            }
+
+            0% {
+                background-position: 100% 0;
+            }
+        }
+
+        @keyframes moveGradientPlanet {
+            100% {
+                background-position: 0 0;
+            }
+
+            0% {
+                background-position: 100% 0;
+            }
+        }
+
+
+
+        @keyframes moveGradient {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            /* Espacio superior */
+            padding-right: 30px;
+            /* Espacio a la derecha */
+            padding-bottom: 0;
+            /* Sin espacio inferior */
+            padding-left: 20px;
+            /* Espacio a la izquierda */
+            color: white;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            /* Nuevo ancho para el logo */
+            height: 200px;
+            /* Nueva altura para el logo */
+            margin-right: 20px;
+        }
+
+        .planet-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .text-container h1 {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            color: white;
+            font-size: 4rem;
+            padding: 80px;
+        }
+
+        .text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* Usar todo el ancho disponible */
+            height: 400px;
+            /* Dar una altura fija */
+            position: relative;
+            /* Para posicionamiento absoluto de los h1 */
+            overflow: hidden;
+            /* Ocultar elementos fuera del contenedor */
+        }
+
+        .text-container p {
+            color: white;
+            /* Esto hará que el texto sea blanco */
+            transition: opacity 1s ease;
+            /* Mantiene la transición suave para la opacidad */
+        }
+
+        .planet {
+            flex-shrink: 0;
+            /* Previene que la imagen se reduzca */
+        }
+
+        .logo img,
+        .planet img {
+            width: 100px;
+            height: auto;
+            margin-right: 30px;
+        }
+
+        .planet img {
+            width: 600px;
+            /* Mantenemos el tamaño original que especificaste */
+            height: auto;
+        }
+
+        .login-button {
+            padding: 20px 40px 20px 40px;
+            /* 20px arriba, 45px a la derecha, 20px abajo, 20px a la izquierda */
+            background-color: #595050;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            /* Para que el botón se ajuste al padding */
+        }
+
+        .red-bg {
+            background-color: red;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .red-bg img {
+            width: 100px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .container {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .cajones-scroll {
+            display: inline-flex;
+            animation: scroll 45s linear 0s infinite;
+            padding: 40px;
+            /* Duración total de la animación 12s (4s por cajón) */
+        }
+
+        .cajon {
+            width: 33.33%;
+            /* Ancho de cada cajón, mostrando tres a la vez */
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+                /* Comienza desde la posición inicial */
+            }
+
+            33.33% {
+                transform: translateX(0);
+                /* Mantiene la primera posición durante 4s */
+            }
+
+            66.66% {
+                transform: translateX(-33.33%);
+                /* Se desplaza al segundo cajón durante 4s */
+            }
+
+            100% {
+                transform: translateX(-66.66%);
+                /* Se desplaza al tercer cajón durante 4s */
+            }
+        }
+
+
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo img {
+                width: 80px;
+                margin-right: 0;
+            }
+
+            .logo h1 {
+                font-size: 1.5em;
+            }
+
+            .login-button {
+                margin-top: 10px;
+            }
+
+            .planet img {
+                width: 50%;
+                /* Ajusta el tamaño del planeta para pantallas medianas */
+                max-width: 300px;
+                /* Un máximo para evitar que sea demasiado grande */
+            }
+
+            .planet-container {
+                flex-direction: column-reverse;
+                padding: 0;
+            }
+
+            .text-container {
+                width: 80%;
+                /* Ajuste para pantallas más pequeñas */
+                align-items: center;
+                /* Centrar los textos */
+                margin-bottom: 20px;
+            }
+
+            .slogan-container {
+                background-color: rgba(255, 255, 255, 0.8);
+                /* Fondo blanco semi-transparente */
+                color: white;
+                /* Letra de color blanco */
+                font-size: 24rem;
+                /* Tamaño de la letra */
+                text-align: center;
+                /* Centrar el texto */
+                padding: 20px 0;
+                /* Añadir algo de espacio verticalmente */
+                width: 80%;
+                /* Ancho del contenedor */
+                max-width: 1200px;
+                /* Ancho máximo para contenedores más grandes */
+                margin: 30px auto;
+                /* Centrado horizontal y espacio arriba y abajo */
+                position: relative;
+                /* Posicionamiento relativo */
+                top: 550px;
+                /* Bajar el contenedor */
+            }
+
+
+
+        }
+
+        @media screen and (max-width: 480px) {
+            .planet img {
+                width: 90%;
+                /* Ajusta aún más el tamaño del planeta para pantallas pequeñas */
+                max-width: 200px;
+            }
+
+            .logo h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="animated-bg animated-bg-header"></div>
+        <div class="logo">
+            <img src="images/logo_1.png" alt="Company Logo" style="width: 170px; height: 170px;">
+            <h1>Importa App</h1>
+            <h1 style="padding-left: 250px; font-size: 1.7rem;">Estamos: 24/7</h1>
+            <a href="https://api.whatsapp.com/send?phone=593980029920" target="_blank"
+                style="display: flex; align-items: center; padding-left: 180px; text-decoration: none; color: white;">
+                <img src="images/whatsapp_logo.png" alt="WhatsApp Logo"
+                    style="width: 60px; height: 60px; margin-right: 10px;">
+                <strong>+593 98 002 9920</strong>
+            </a>
+
+
+
+        </div>
+        <a href="https://app.importaapp.com/" class="login-button">Login</a>
+    </header>
+
+
+
+
+    <div class="planet-container">
+        <div class="animated-bg animated-bg-planet"></div>
+        <div class="text-container">
+            <h1>Ecosistema de negocios internacionales</h1>
+            <h1>Servicio bajo demanda</h1>
+            <h1>Logística verde</h1>
+            <h1>Blockchain en la cadena de suministros</h1>
+            <h1>Economía colaborativa</h1>
+        </div>
+        <div class="planet">
+            <img src="images/planet.png" alt="Planet Image">
+        </div>
+    </div>
+
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: center; align-items: center; padding: 150px 0;">
+        IMPORTA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto
+    </div>
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 20px 0; padding-left: 40px; font-weight: bold;">
+        Beneficios
+    </div>
+
+
+
+    <!-- TODO: Cajones -->
+    <div class="container">
+        <div class="cajones-scroll">
+            <div class="cajon">
+                <h2>PROVEEDORES:</h2>
+                <p>Compra directo a fabricantes confiables y efectivos</p>
+            </div>
+            <div class="cajon">
+                <h2>OPERACIONES:</h2>
+                <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
+            </div>
+            <div class="cajon">
+                <h2>TRAZABILIDAD:</h2>
+                <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga</p>
+            </div>
+            <div class="cajon">
+                <h2>ARRIBO Y NACIONALIZACIÓN:</h2>
+                <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera</p>
+            </div>
+            <div class="cajon">
+                <h2>SERVICIOS:</h2>
+                <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de
+                    proveedores y análisis de riesgo</p>
+            </div>
+            <div class="cajon">
+                <h2>PROVEEDORES:</h2>
+                <p>Compra directo a fabricantes confiables y efectivos</p>
+            </div>
+            <div class="cajon">
+                <h2>OPERACIONES:</h2>
+                <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
+            </div>
+            <div class="cajon">
+                <h2>TRAZABILIDAD:</h2>
+                <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga</p>
+            </div>
+            <div class="cajon">
+                <h2>ARRIBO Y NACIONALIZACIÓN:</h2>
+                <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera</p>
+            </div>
+            <div class="cajon">
+                <h2>SERVICIOS:</h2>
+                <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de
+                    proveedores y análisis de riesgo</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        window.onload = function () {
+            const texts = document.querySelectorAll('.text-container h1');
+
+            // Duplica los cajones para crear un scroll infinito
+            const cajonesScroll = document.querySelector('.cajones-scroll');
+            cajonesScroll.innerHTML += cajonesScroll.innerHTML;
+
+            // Función para manejar el reinicio de la animación
+            function restartAnimation() {
+                // Reinicia la animación de scroll horizontal
+                cajonesScroll.style.animation = 'none';
+                cajonesScroll.offsetHeight; /* Activa un repaint, sin esto la animación no se reinicia */
+                cajonesScroll.style.animation = 'scroll 0s linear infinite';
+            }
+
+            // Escucha el evento 'animationiteration' para reiniciar la animación
+            cajonesScroll.addEventListener('animationiteration', restartAnimation);
+
+            // Función para mostrar y ocultar los textos
+            async function animateTexts() {
+                while (true) {
+                    for (let i = 0; i < texts.length; i++) {
+                        texts[i].style.opacity = '1'; // Mostrar el h1
+                        await new Promise(resolve => setTimeout(resolve, 3000)); // Esperar 2 segundos
+                        texts[i].style.opacity = '0'; // Ocultar el h1
+                        await new Promise(resolve => setTimeout(resolve, 500)); // Esperar medio segundo
+                    }
+                }
+            }
+
+            // Inicia la animación de los textos
+            animateTexts();
+        };
+
+    </script>
+
+
+
+</body>
+
+</html>
