@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .dialogueBox {
+      background-color: #c0a9a9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      transition: top 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .dialogueBox .userMsg,
+    .dialogueBox .botReply {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .dialogueBox img {
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+
+    .dialogueBox .userMsg p,
+    .dialogueBox .botReply p {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px;
+    }
+
+    .animationWrapper {
+      background-color: #e5172a;
+      position: absolute;
+      border-radius: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .dot,
+    .dot2 {
+      border-radius: 50%;
+      background-color: black;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    .dot2 {
+      width: 25px;
+      height: 25px;
+    }
+
+    .backgroundImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    .animationWrapper:hover .backgroundImg {
+      transform: translateY(-100px);
+      opacity: 1;
+    }
+
+    .animationWrapper:hover .dot {
+      transform: translateY(-85px) translateX(24px);
+      opacity: 1;
+    }
+
+    .animationWrapper:hover .dot2 {
+      transform: translateY(-85px) translateX(-45px);
+      opacity: 1;
+    }
+
+    .animationWrapper p {
+      color: white;
+      opacity: 0;
+    }
+
+    .animationWrapper:hover p {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dialogueBox" id="dialogue">
+    <div class="userMsg">
+      <img src="images/default.jpeg" alt="User">
+      <p>¿A qué se dedican?</p>
+    </div>
+    <div class="botReply">
+      <p>Nos dedicamos a ayudar a empresas y personas que desean importar y exportar.</p>
+      <img src="images/osito.png" alt="Bot">
+    </div>
+  </div>
+  <div class="animationWrapper" id="interaction">
+    <p>Haz clic aquí!</p>
+    <img src="images/osito.png" class="backgroundImg">
+    <div class="dot"></div>
+    <div class="dot2"></div>
+  </div>
+
+  <script>
+    var interaction = document.getElementById("interaction");
+    var dialogue = document.getElementById("dialogue");
+
+    function showDialogue() {
+      dialogue.style.top = "20%";
+      dialogue.style.opacity = "1";
+    }
+
+    function hideDialogue() {
+      dialogue.style.top = "50%";
+      dialogue.style.opacity = "0";
+    }
+
+    interaction.addEventListener("mouseenter", showDialogue);
+    interaction.addEventListener("mouseleave", hideDialogue);
+  </script>
+</body>
+
+</html>

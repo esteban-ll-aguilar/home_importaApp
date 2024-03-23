@@ -218,9 +218,52 @@
 
         .cajones-scroll {
             display: inline-flex;
-            animation: scroll 45s linear 0s infinite;
+            animation: scroll 1s linear 0s infinite;
             padding: 40px;
             /* Duración total de la animación 12s (4s por cajón) */
+        }
+
+        section {
+            background: linear-gradient(45deg, #0D1E28, #e32b2b);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            /* Alinear los elementos verticalmente */
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contentSA {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+            height: 400px;
+        }
+
+        .img_tuapp {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: circle;
+            margin-left: 35px;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 1.2em;
         }
 
         .cajon {
@@ -235,6 +278,7 @@
             text-align: center;
             border-radius: 10px;
         }
+
 
         .cotiza-container {
             padding: 0 120px;
@@ -327,6 +371,25 @@
             /* Posicionamiento relativo para contener absolutamente el #carrusel-contenido */
         }
 
+        .map-container {
+            display: flex;
+            justify-content: center;
+            /* Centra el contenido horizontalmente */
+            align-items: center;
+            /* Centra el contenido verticalmente */
+            padding: 0px 0;
+            /* Espaciado arriba y abajo para separación */
+        }
+
+        #map {
+            height: 400px;
+            /* Altura del mapa */
+            width: 80%;
+            /* Ancho del mapa, ajustable según prefieras */
+            max-width: 1000px;
+            /* Máximo ancho del mapa */
+        }
+
         #carrusel-contenido {
             display: flex;
             /* Usamos flex para alinear los elementos del carrusel */
@@ -343,6 +406,71 @@
             /* Mantiene el ancho para 3 imágenes lado a lado */
             float: left;
             /* Asegura que los elementos se alineen horizontalmente */
+        }
+
+        .benefitsSection {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .benefitsContentWrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .benefitsImage {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefitsTitle {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .benefitsList {
+            list-style-type: circle;
+            margin-left: 35px;
+            padding: 0;
+        }
+
+        .benefitsListItem {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .benefitBox {
+            background: #ffffffa9;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 4px 6px rgba(114, 102, 102, 0.1);
+            margin: 10px;
+            text-align: center;
+        }
+
+        .benefitHighlight {
+            font-size: 2em;
+            margin: 0;
+            color: #e5172a;
+        }
+
+        .logo-img {
+            max-height: 160%;
+            /* Limita la altura máxima al 100% del contenedor padre */
+            width: 220px;
+            /* Mantiene la proporción de la imagen ajustando automáticamente el ancho */
+            object-fit: contain;
+            /* Asegura que la imagen se ajuste dentro del contenedor sin ser recortada o estirada */
         }
 
         @keyframes automatizacion {
@@ -537,55 +665,37 @@
     </div>
     <div class="slogan-container"
         style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
-        Beneficios
+
     </div>
+    <section class="benefitsSection">
+        <div class="slogan-container"
+            style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
+            Beneficios
+        </div>
+        <div class="benefitsContentWrapper">
+            <div>
+                <div class="benefitBox">
+                    <h2 class="benefitHighlight">40%</h2>
+                    <p>Mejora de la efectividad logística</p>
+                </div>
+                <div class="benefitBox">
+                    <h2 class="benefitHighlight">$ 15k</h2>
+                    <p>Ahorro anual en nómina, aprendizaje sobre costos, demorajes, etc.</p>
+                </div>
+                <div class="benefitBox">
+                    <h2 class="benefitHighlight">70%</h2>
+                    <p>Reducción de tiempos muertos por diferencia horaria</p>
+                </div>
+            </div>
+            <img src="images/beneficios.jpeg" alt="Beneficios" class="benefitsImage">
+        </div>
+    </section>
 
 
     <!-- TODO: Cajones -->
     <div class="container">
         <div class="cajones-scroll">
-            <div class="cajon">
-                <h2>PROVEEDORES:</h2>
-                <p>Compra directo a fabricantes confiables y efectivos</p>
-            </div>
-            <div class="cajon">
-                <h2>OPERACIONES:</h2>
-                <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
-            </div>
-            <div class="cajon">
-                <h2>TRAZABILIDAD:</h2>
-                <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga</p>
-            </div>
-            <div class="cajon">
-                <h2>ARRIBO Y NACIONALIZACIÓN:</h2>
-                <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera</p>
-            </div>
-            <div class="cajon">
-                <h2>SERVICIOS:</h2>
-                <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de
-                    proveedores y análisis de riesgo</p>
-            </div>
-            <div class="cajon">
-                <h2>PROVEEDORES:</h2>
-                <p>Compra directo a fabricantes confiables y efectivos</p>
-            </div>
-            <div class="cajon">
-                <h2>OPERACIONES:</h2>
-                <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
-            </div>
-            <div class="cajon">
-                <h2>TRAZABILIDAD:</h2>
-                <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga</p>
-            </div>
-            <div class="cajon">
-                <h2>ARRIBO Y NACIONALIZACIÓN:</h2>
-                <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera</p>
-            </div>
-            <div class="cajon">
-                <h2>SERVICIOS:</h2>
-                <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de
-                    proveedores y análisis de riesgo</p>
-            </div>
+
         </div>
     </div>
 
@@ -616,60 +726,176 @@
         Nuestros colaboradores
     </div>
 
-
-
-
-
-
-
-    <div class="container_l">
-        <div class="arrow left" onclick="moveSlide('prev')">&#10094;</div> <!-- Flecha izquierda -->
-        <div class="carousel-primary">
-            <a href=""><img src="logos/conect_america.png" alt="logo1" /></a>
-            <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img
-                    src="logos/embajada_china_logo.png" alt="logo2" /></a>
-            <a
-                href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img
-                    src="logos/emprelatam_logo.png" alt="logo3" /></a>
-            <a
-                href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img
-                    src="logos/endeavor_logo.png" alt="logo4" /></a>
-            <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img
-                    src="logos/forbes_logo.png" alt="logo5" /></a>
-            <a href="https://connectamericas.com/company/importa"><img src="logos/conect_america.png" alt="logo1" /></a>
-            <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img
-                    src="logos/embajada_china_logo.png" alt="logo2" /></a>
-            <a
-                href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img
-                    src="logos/emprelatam_logo.png" alt="logo3" /></a>
-            <a
-                href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img
-                    src="logos/endeavor_logo.png" alt="logo4" /></a>
-            <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img
-                    src="logos/forbes_logo.png" alt="logo5" /></a>
-        </div>
-        <div class="arrow right" onclick="moveSlide('next')">&#10095;</div> <!-- Flecha derecha -->
+    <!-- Contenedor de la primera fila -->
+    <div style="display: flex; justify-content: space-around; align-items: center; height: 200px;">
+        <a href=""><img class="logo-img" src="logos/conect_america.png" alt="logo1" /></a>
+        <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml"><img class="logo-img"
+                src="logos/embajada_china_logo.png" alt="logo2" /></a>
+        <a
+            href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/"><img
+                class="logo-img" src="logos/emprelatam_logo.png" alt="logo3" /></a>
     </div>
 
-    <div class="slogan-container"
+    <!-- Contenedor de la segunda fila -->
+    <div style="display: flex; justify-content: space-around; align-items: center; height: 250px;">
+        <a
+            href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop"><img
+                class="logo-img" src="logos/endeavor_logo.png" alt="logo4" /></a>
+        <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744"><img
+                class="logo-img" src="logos/forbes_logo.png" alt="logo5" /></a>
+        <a href="https://tonelaje.com/"><img class="logo-img" src="logos/logos_tonelaje.png" alt="logo6" /></a>
+    </div>
+    <!-- <div class="slogan-container"
         style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
         Nuestros colaboradores
-    </div>
-
-    <div id="carrusel-contenido">
-        <div id="carrusel-caja">
-            <div class="carrusel-elemento">
-                <img class="imagenes" src="logos/emprelatam_logo.png">
-            </div>
-            <div class="carrusel-elemento">
-                <img class="imagenes" src="logos/emprelatam_logo.png">
-            </div>
-            <div class="carrusel-elemento">
-                <img class="imagenes" src="logos/emprelatam_logo.png">
-            </div>
+    </div> -->
+    <div class="cotiza-container"
+        onclick="window.location.href='https://app.importaapp.com/forms/contact-form?fbclid=IwAR2JhWHHNFnQ3497QrzmXRNlekXGeXDmklx2Lq8luSw35_1mBvjtSlkns6M';">
+        <div class="cotiza-button">
+            <img src="images/logo_1.png" alt="Logo" style="width: 120px; height: 120px; margin-right: 10px;">
+            <span><strong>Cotiza ahora</strong></span>
         </div>
     </div>
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 100px 0 20px 0; padding-left: 40px; font-weight: bold;">
 
+    </div>
+    <section>
+        <h1>Tu app de comercio internacional</h1>
+        <div class="contentSA">
+            <img src="images/tu app.jpeg" alt="tu app" class="img_tuapp">
+            <div>
+                <ul>
+                    <li>Cotiza y contrata servicios 24/7</li>
+                    <li>Múltiples orígenes y destinos</li>
+                    <li>Proveedores verificados y efectivos</li>
+                    <li>Tracking de operaciones</li>
+                    <li>Notificaciones automatizadas</li>
+                    <li>Canales de pago digital y facilidades</li>
+                    <li>Asesoría personalizada</li>
+                    <li>Servicios especializados en China para importadores</li>
+                    <li>Exportación de productos a mercado Chino</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div style="padding: 90px 0; text-align: center;">
+        <a href="osito.html" style="text-decoration: none;">
+            <button
+                style="background-color: #fb0909; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; margin: 4px 2px; cursor: pointer; border: none; border-radius: 10px;">
+                Tópame
+            </button>
+        </a>
+    </div>
+    <div class="slogan-container"
+        style="font-size: 2.5rem; text-align: center; display: flex; justify-content: left; align-items: center; padding: 0px 0 20px 0; padding-left: 40px; font-weight: bold;">
+        Cobertura
+    </div>
+
+
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr8f2d8FL3I2PZZ97SdgEqqnmzpEUHG6Y&callback=initMap"
+        async defer></script>
+    <script>
+        let map;
+
+        function initMap() {
+            const styledMapType = new google.maps.StyledMapType(
+                [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e74c3c" // Rojo para la tierra
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#ffffff" // Texto blanco
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#e74c3c" // Borde de texto rojo
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#fe4c1c" // Rojo para la tierra
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#FFFFFF" // Azul para el agua
+                            }
+                        ]
+                    }
+                ],
+                { name: 'Mapa Estilizado' }
+            );
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 0, lng: 0 }, // Centro del mapa (latitud y longitud)
+                zoom: 2, // Nivel de zoom inicial
+                mapTypeControlOptions: {
+                    mapTypeIds: ['styled_map']
+                }
+            });
+
+            map.mapTypes.set('styled_map', styledMapType);
+            map.setMapTypeId('styled_map');
+
+            // Marcadores para China, Estados Unidos, Colombia y Ecuador
+            addMarker({ lat: 35.8617, lng: 104.1954 }, "China", "red"); // Marcador rojo
+            addMarker({ lat: 37.0902, lng: -95.7129 }, "Estados Unidos", "blue"); // Marcador azul
+            addMarker({ lat: 4.5709, lng: -74.2973 }, "Colombia", "green"); // Marcador verde
+            addMarker({ lat: -1.8312, lng: -78.1834 }, "Ecuador", "yellow"); // Marcador amarillo
+        }
+
+        function addMarker(location, title, color) {
+            let marker = new google.maps.Marker({
+                position: location,
+                map,
+                title: title,
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 8,
+                    fillColor: color,
+                    fillOpacity: 1,
+                    strokeColor: 'white',
+                    strokeWeight: 3,
+                }
+            });
+        }
+    </script>
 
 
 
@@ -715,6 +941,8 @@
             // Duplica los cajones para crear un scroll infinito
             const cajonesScroll = document.querySelector('.cajones-scroll');
             cajonesScroll.innerHTML += cajonesScroll.innerHTML;
+
+
 
             // Función para manejar el reinicio de la animación
             function restartAnimation() {
