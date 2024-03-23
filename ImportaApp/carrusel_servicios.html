@@ -1,0 +1,150 @@
+<style>
+    .container8 {
+      margin: auto;
+      background-color: white;
+      width: 100%;
+      max-width: 800px;
+      padding: 30px;
+      position: relative;
+    }
+  
+    ul, li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  
+    ul.slider {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+  
+    ul.slider li {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      width: 100%;
+      height: inherit;
+      transition: opacity .5s;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    ul.slider li img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px; /* Espaciado entre la imagen y el h1 */
+    }
+  
+    ul.slider li div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  
+    ul.slider li h1 {
+      font-size: 1.5em;
+      color: #333;
+      text-align: center;
+      margin-top: 0; /* Resetear el margen superior */
+    }
+  
+    ul.slider li p {
+      font-size: 1em;
+      color: #666;
+      text-align: center;
+    }
+  
+    ul.slider li:first-child {
+      opacity: 1; /*Mostramos el primer <li>*/
+    }
+  
+    ul.slider li.active {
+      opacity: 1; /*Mostramos el <li> activo*/
+    }
+  
+    .menu {
+      text-align: center;
+      margin: 20px;
+    }
+  
+    .menu li {
+      display: inline-block;
+      text-align: center;
+    }
+  
+    .menu li a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      background-color: grey;
+      padding: 10px;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      border-radius: 100%;
+    }
+  </style>
+  
+  <div class="container8">
+    <ul class="slider">
+      <li class="active" id="slide1">
+        <div>
+          <img src="images/Proveedores.png"/>
+          <h1>PROVEEDORES</h1>
+          <p>Compra directo a fabricantes confiables y efectivos</p>
+        </div>
+      </li>
+      <li id="slide2">
+        <div>
+          <img src="images/Operaciones.jpeg"/>
+          <h1>OPERACIONES</h1>
+          <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
+        </div>
+      </li>
+      <li id="slide3">
+        <div>
+          <img src="images/Trazabilidad.png">
+          <h1>TRAZABILIDAD</h1>
+          <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga.</p>
+        </div>
+      </li>
+      <li id="slide4">
+        <div>
+          <img src="images/arribo.jpg" alt="">
+          <h1>ARRIBO Y NACIONALIZACION</h1>
+          <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera.</p>
+        </div>
+      </li>
+      <li id="slide5">
+        <div>
+          <img src="images/Servicios.png" alt="">
+          <h1>SERVICIOS</h1>
+          <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de proveedores y análisis de riesgo.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <script>
+    let slides = document.querySelectorAll('.slider li');
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 2000);
+  
+    function nextSlide() {
+      slides[currentSlide].className = ' ';
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].className = 'active';
+    }
+  </script>
+  
