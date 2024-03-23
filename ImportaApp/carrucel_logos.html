@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carousel de Logos</title>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  animation: carousel-animation 20s linear infinite;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 10px;
+}
+
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-800px); /* Ajusta el valor según la cantidad de logos */
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="logo"><img src="logo1.png" alt="Logo 1"></div>
+    <div class="logo"><img src="logo2.png" alt="Logo 2"></div>
+    <div class="logo"><img src="logo3.png" alt="Logo 3"></div>
+    <div class="logo"><img src="logo4.png" alt="Logo 4"></div>
+    <div class="logo"><img src="logo5.png" alt="Logo 5"></div>
+  </div>
+</div>
+<script>
+    // Opcional: Detener la animación al hacer hover sobre el carrusel
+    const carousel = document.querySelector('.carousel');
+    carousel.addEventListener('mouseover', () => {
+    carousel.style.animationPlayState = 'paused';
+    });
+    carousel.addEventListener('mouseout', () => {
+    carousel.style.animationPlayState = 'running';
+    });
+
+</script>
+
+</body>
+</html>
