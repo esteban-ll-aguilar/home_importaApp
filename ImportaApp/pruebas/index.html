@@ -41,13 +41,15 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(to right, #000000, #FF0000, #000000, #FF0000, #000000);
+            background: linear-gradient(to right, transparent, transparent, transparent, transparent, transparent);
             background-size: 400% 100%;
+            background-color: transparent;
             /* Ajustar solo el ancho del gradiente */
             animation: moveGradientHeader 6s linear infinite;
             /* Cambiar la duración de la animación */
         }
 
+        /*degradado fondo*/
         .animated-bg-planet {
             position: absolute;
             top: 0;
@@ -55,9 +57,10 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(to right, #000000, #FF0000, #000000, #FF0000, #000000);
+            background: linear-gradient(to right, #6c6c6c, #ffffff, #6c6c6c, #fefefe, #6c6c6c);
             background-size: 400% 100%;
             /* Ajustar solo el ancho del gradiente */
+
             animation: moveGradientPlanet 6s linear infinite;
             /* Cambiar la duración de la animación */
         }
@@ -187,8 +190,8 @@
         .login-button {
             padding: 20px 40px 20px 40px;
             /* 20px arriba, 45px a la derecha, 20px abajo, 20px a la izquierda */
-            background-color: #595050;
-            color: white;
+            background-color: #fe4c1c;
+            color: #FFFFFF;
             text-decoration: none;
             border-radius: 10px;
             display: inline-block;
@@ -617,8 +620,9 @@
     <header>
         <div class="animated-bg animated-bg-header"></div>
         <div class="logo">
-            <img src="images/logo_1.png" alt="Company Logo" style="width: 170px; height: 170px;">
-            <h1>Importa App</h1>
+
+            <img src="images/logo_importaapp.png" alt="Company Logo" style="width: 210px; height: 105px;">
+
             <h1 style="padding-left: 210px; font-size: 1.7rem;">Estamos: 24/7</h1>
             <a href="https://api.whatsapp.com/send?phone=593980029920" target="_blank"
                 style="display: flex; align-items: center; padding-left: 170px; text-decoration: none; color: white;">
@@ -653,13 +657,13 @@
 
     <div class="slogan-container"
         style="font-size: 2.5rem; text-align: center; display: flex; justify-content: center; align-items: center; padding: 150px 0; font-weight: bold;">
-        <strong>IMPORTA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto</strong>
+        <strong>IMPORTA HOLA AHORA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto</strong>
     </div>
 
     <div class="cotiza-container"
         onclick="window.location.href='https://app.importaapp.com/forms/contact-form?fbclid=IwAR2JhWHHNFnQ3497QrzmXRNlekXGeXDmklx2Lq8luSw35_1mBvjtSlkns6M';">
         <div class="cotiza-button">
-            <img src="images/logo_1.png" alt="Logo" style="width: 120px; height: 120px; margin-right: 10px;">
+            <img src="images/logo_1.png" alt="Logo" style="width: 100px; height: 80px; margin-right: 10px;">
             <span><strong>Cotiza ahora</strong></span>
         </div>
     </div>
