@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/cajones_carrucel.css">
     <link rel="stylesheet" href="css/osito.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
     <style>
         /* Estilos para el mapa */
@@ -43,7 +44,7 @@
 
     
 
-    <!--TODO: Arreglado, falta poco responsive-->
+    <!--TODo: Arreglado, falta poco responsive HEADER-->
 
     <header>
         <div class="header-left">
@@ -57,82 +58,74 @@
         </div>
         <div class="header-right">
             <a href="https://app.importaapp.com/" class="login-button"><strong class="stronf">Login</strong></a>
-
-            
         </div>
     </header>
     
-    <!--TODO: falta-->
+    <!--TOD: Arreglado PLANETA-->
 
     
     <div class="planet-container">
         <div class="animated-bg animated-bg-planet"></div>
-        <div class="text-container">
-            <div class="titulos"></div>
-            <h1>Ecosistema de negocios internacionales</h1>
-            <h1>Servicio bajo demanda</h1>
-            <h1>Logística verde</h1>
-            <h1>Blockchain en la cadena de suministros</h1>
-            <h1>Economía colaborativa</h1>
-        </div>
+        <h1 class="text-container" style="font-size: 25px;"></h1>
         <div class="div_planeta">
             <img src="images/planet.png" alt="Planet Image">
         </div>
     </div>
+    
 
-<!--listo-->
+    <!--TOD: Arreglado SLOGAN JUNTO A BOTTON-->
 
     <div class="slogan-container">
-        <strong>IMPORTA AHORA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto</strong>
-        <br>
+        <strong>¡Importa ahora y exporta fácil, rápido y seguro! No necesitas ser un experto.</strong>
         <div class="cotiza-button">
-            <img src="images/logo_1.png" alt="Logo" style="width: 100px; height: 80px; margin-right: 10px;">
+            <img src="images/logo_1.png" alt="Logo" class="logo-img">
             <span><strong>Cotiza ahora</strong></span>
         </div>
     </div>
-<!--listo-->
 
+    <!--TOD: Arreglado SECCION DE BENEFICIOS-->
 
     <section class="benefitsSection">
         <h1>Beneficios</h1>
         <div class="benefitsContentWrapper">
-            <div>
-                <div class="benefitBox">
-                    <h2 class="benefitHighlight">40%</h2>
-                    <p>Mejora de la efectividad logística</p>
-                </div>
-                <div class="benefitBox">
-                    <h2 class="benefitHighlight">$ 15k</h2>
-                    <p>Ahorro anual en nómina, aprendizaje sobre costos, demorajes, etc.</p>
-                </div>
-                <div class="benefitBox">
-                    <h2 class="benefitHighlight">70%</h2>
-                    <p>Reducción de tiempos muertos por diferencia horaria</p>
-                </div>
+            <div class="benefitBox">
+                <h2 class="benefitHighlight">40%</h2>
+                <p>Mejora de la efectividad logística</p>
+            </div>
+            <div class="benefitBox">
+                <h2 class="benefitHighlight">$ 15k</h2>
+                <p>Ahorro anual en nómina, aprendizaje sobre costos, demorajes, etc.</p>
+            </div>
+            <div class="benefitBox">
+                <h2 class="benefitHighlight">70%</h2>
+                <p>Reducción de tiempos muertos por diferencia horaria</p>
             </div>
             <img src="images/beneficios.jpeg" alt="Beneficios" class="benefitsImage">
         </div>
     </section>
+    
 
 
-    <!-- TODO: Cajones -->
-    <section class="section_cajones">
-        <div class="div_cajones">
-            <ul class="slider">
-                <li>
-                    <div class="imagen_cajon">
-                        <img src="images/Proveedores.png" alt="Proveedores">
-                    </div>
-                    <h1>PROVEEDORES</h1>
-                    <p>Compra directo a fabricantes confiables y efectivos</p>
-                </li>
-                <li>
-                    <div class="imagen_cajon">
-                        <img src="images/Operaciones.jpeg" alt="Operaciones">
-                    </div>
-                    <h1>OPERACIONES</h1>
-                    <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
-                </li>
+    <!-- TODO: Cajones FALTA RESPONSIVE -->
+    html
+Copy code
+<section class="section_cajones">
+    <div class="div_cajones">
+        <ul class="slider">
+            <li>
+                <figure class="imagen_cajon">
+                    <img src="images/Proveedores.png" alt="Proveedores">
+                    <figcaption>PROVEEDORES</figcaption>
+                </figure>
+                <p>Compra directo a fabricantes confiables y efectivos</p>
+            </li>
+            <li>
+                <figure class="imagen_cajon">
+                    <img src="images/Operaciones.jpeg" alt="Operaciones">
+                    <figcaption>OPERACIONES</figcaption>
+                </figure>
+                <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
+            </li>
                 <li>
                     <div class="imagen_cajon">
                         <img src="images/Trazabilidad.png" alt="Trazabilidad">
@@ -157,28 +150,12 @@
             </ul>
         </div>
     </section>
-    
-    
 
 
-      <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                autoplay: true,
-                autoplaySpeed: 2000
-            });
-        });
-    </script>
-    
 
 
     <div class="propuesta-valor">
-        <strong>Propuesta de valor: Somos tu departamento de comercio de exterior</strong>
+        <h1>Somos tu departamento de comercio de exterior</h1>
         <br>
         <div class="cotiza_propuesta_valor" onclick="window.location.href='form_w.html';">
             <div class="cotiza_propuesta_valor_button">
@@ -376,6 +353,7 @@
 <!--importaciones-->
 <script src="js/mapa.js"></script>
 <script src="js/animacion_titulos.js"></script>
+<script src="js/cajones_carrucel_servicio.js"></script>
 
 </body>
 

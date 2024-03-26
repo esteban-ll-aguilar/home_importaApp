@@ -1,43 +1,33 @@
-.div_cajones ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
-    justify-content: center;
+/* Estilos básicos para el carrusel */
+.div_cajones {
+    overflow: hidden;
 }
 
-.div_cajones li {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    min-width: 200px; /* Establece un ancho mínimo para cada cajón */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider li {
+    flex: 0 0 100%;
+    margin-right: 20px; /* Espacio entre elementos */
+    list-style: none;
 }
 
 .imagen_cajon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .imagen_cajon img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-}
-
-.div_cajones h1, .div_cajones p {
-    margin: 5px 0;
+    max-height: 200px; /* Altura máxima de las imágenes */
 }
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 767px) {
-    .div_cajones li {
-        flex-basis: 100%; /* Establece que cada cajón ocupe el 100% del ancho */
+    .slider li {
+        flex-basis: 100%; /* Para que los elementos ocupen el ancho completo */
+        margin-right: 0; /* Sin espacio entre elementos */
     }
 }

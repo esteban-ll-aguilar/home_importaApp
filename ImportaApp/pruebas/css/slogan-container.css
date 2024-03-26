@@ -1,4 +1,3 @@
-
 /* Contenedor del eslogan */
 .slogan-container {
     display: flex;
@@ -8,6 +7,9 @@
     margin: 20px;
     padding: 20px;
     text-align: center;
+    background-color: #f8f9fa; /* Fondo llamativo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Estilos para el texto del eslogan */
@@ -15,6 +17,8 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #333; /* Color de texto oscuro */
+    line-height: 1.5; /* Espaciado de línea adecuado */
 }
 
 /* Estilos para el botón de cotización */
@@ -22,11 +26,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
-    background-color: #007bff;
+    padding: 10px 20px;
+    background-color: #FE4C1C;
     color: white;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.cotiza-button:hover {
+    background-color: #e5172a; /* Color de fondo más oscuro al pasar el mouse */
 }
 
 .cotiza-button img {
@@ -39,6 +48,7 @@
 @media screen and (max-width: 768px) {
     .slogan-container {
         margin: 15px;
+        padding: 15px;
     }
 
     .slogan-container strong {
@@ -46,11 +56,11 @@
     }
 
     .cotiza-button {
-        padding: 0 16px;
+        padding: 8px 16px;
     }
 
     .cotiza-button img {
-        width: 80px;
+        width: 64px;
         height: 64px;
         margin-right: 8px;
     }
