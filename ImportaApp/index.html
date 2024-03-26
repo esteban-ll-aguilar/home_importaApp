@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImportaApp</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="pruebas/styles.css"> -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/paneta.css">
+    <link rel="stylesheet" href="css/slogan-container.css">
+    <link rel="stylesheet" href="css/beneficios.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/propuesta_valor.css">
+    <link rel="stylesheet" href="css/tu_app.css">
+    <link rel="stylesheet" href="css/colaboradores.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/cajones_carrucel.css">
+</head>
+
+<body>
+    <!--listo-->
+
+    <header>
+        <div class="div_header_logo">
+            <img src="images/logo_importaapp.png" alt="Company Logo" class="image_logo">
+            <h1>Estamos: 24/7</h1>
+            <a href="https://api.whatsapp.com/send?phone=593980029920" target="_blank">
+                <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" class="whasapp_header_logo">
+                <strong>+593 98 002 9920</strong>
+            </a>
+        </div>
+        <a href="https://app.importaapp.com/" class="login-button"><strong>Login</strong></a>
+    </header>
+    <!--listo-->
+
+    <div class="cajones-scroll">
+
+    </div>
+    <div class="planet-container">
+        <div class="animated-bg animated-bg-planet"></div>
+        <div class="text-container">
+            <h1>Ecosistema de negocios internacionales</h1>
+            <h1>Servicio bajo demanda</h1>
+            <h1>Logística verde</h1>
+            <h1>Blockchain en la cadena de suministros</h1>
+            <h1>Economía colaborativa</h1>
+        </div>
+        <div class="div_planeta">
+            <img src="images/planet.png" alt="Planet Image">
+        </div>
+    </div>
+
+<!--listo-->
+
+    <div class="slogan-container">
+        <strong>IMPORTA AHORA y EXPORTA fácil, rápido, seguro y no necesitas ser un experto</strong>
+        <br>
+        <div class="cotiza-button">
+            <img src="images/logo_1.png" alt="Logo" style="width: 100px; height: 80px; margin-right: 10px;">
+            <span><strong>Cotiza ahora</strong></span>
+        </div>
+    </div>
+<!--listo-->
+
+
+    <section class="benefitsSection">
+        <h1>Beneficios</h1>
+        <div class="benefitsContentWrapper">
+            <div>
+                <div class="benefitBox">
+                    <h2 class="benefitHighlight">40%</h2>
+                    <p>Mejora de la efectividad logística</p>
+                </div>
+                <div class="benefitBox">
+                    <h2 class="benefitHighlight">$ 15k</h2>
+                    <p>Ahorro anual en nómina, aprendizaje sobre costos, demorajes, etc.</p>
+                </div>
+                <div class="benefitBox">
+                    <h2 class="benefitHighlight">70%</h2>
+                    <p>Reducción de tiempos muertos por diferencia horaria</p>
+                </div>
+            </div>
+            <img src="images/beneficios.jpeg" alt="Beneficios" class="benefitsImage">
+        </div>
+    </section>
+
+
+    <!-- TODO: Cajones -->
+    <section class="section_cajones">
+        <div class="div_cajones">
+            <ul class="slider">
+                <li class="active" id="slide1">
+                    <div>
+                        <img src="images/Proveedores.png" alt="Proveedores">
+                        <h1>PROVEEDORES</h1>
+                        <p>Compra directo a fabricantes confiables y efectivos</p>
+                    </div>
+                </li>
+                <li id="slide2">
+                    <div>
+                        <img src="images/Operaciones.jpeg" alt="Operaciones">
+                        <h1>OPERACIONES</h1>
+                        <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
+                    </div>
+                </li>
+                <li id="slide3">
+                    <div>
+                        <img src="images/Trazabilidad.png" alt="Trazabilidad">
+                        <h1>TRAZABILIDAD</h1>
+                        <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga.</p>
+                    </div>
+                </li>
+                <li id="slide4">
+                    <div>
+                        <img src="images/arribo.jpg" alt="Arribo y Nacionalización">
+                        <h1>ARRIBO Y NACIONALIZACION</h1>
+                        <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera.</p>
+                    </div>
+                </li>
+                <li id="slide5">
+                    <div>
+                        <img src="images/Servicios.png" alt="Servicios">
+                        <h1>SERVICIOS</h1>
+                        <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de proveedores y análisis de riesgo.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
+
+
+      <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
+    
+
+
+    <div class="propuesta-valor">
+        <strong>Propuesta de valor: Somos tu departamento de comercio de exterior</strong>
+        <br>
+        <div class="cotiza_propuesta_valor" onclick="window.location.href='form_w.html';">
+            <div class="cotiza_propuesta_valor_button">
+                <img src="images/logo_1.png" alt="Logo" class="logo_img_propuesta_valor">
+                <span><strong>Importador / Exportador</strong></span>
+            </div>
+        </div>
+    
+        <div class="cotiza_propuesta_valor" onclick="window.location.href='form_operator_log.html';">
+            <div class="cotiza_propuesta_valor_button">
+                <img src="images/logo_work.png" alt="Logo" class="logo_img_propuesta_valor">
+                <span><strong>Aliado Operador</strong></span>
+            </div>
+        </div>
+    </div>
+    
+<!-- infinite scroll slider de logos-->
+
+    <div class="colaboradores">
+        <h1>Nuestros Colaboradores</h1>
+    
+        <div class="logos_colaboradores">
+            <div>
+                <a href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop">
+                    <img class="logo-img" src="logos/endeavor_logo.png" alt="Logo de Endeavor Ecuador" />
+                </a>
+            </div>
+            <div>
+                <a href="https://www.forbes.com.ec/negocios/me-canse-atrapar-peces-gordos-otras-personas-n26744">
+                    <img class="logo-img" src="logos/forbes_logo.png" alt="Logo de Forbes Ecuador" />
+                </a>
+            </div>
+            <div>
+                <a href="https://tonelaje.com/">
+                    <img class="logo-img" src="logos/logos_tonelaje.png" alt="Logo de Tonelaje" />
+                </a>
+            </div>
+            <div>
+                <a href="https://connectamericas.com/company/importa">
+                    <img class="logo-img" src="logos/conect_america.png" alt="Logo de Coneect America" />
+                </a>
+            </div>
+            <div>
+                <a href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/">
+                    <img class="logo-img" src="logos/emprelatam_logo.png" alt="Logo de Emprelatam" />
+                </a>
+            </div>
+            <div>
+                <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml">
+                    <img class="logo-img" src="logos/embajada_china_logo.png" alt="Logo de la Embajada China" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.logos_colaboradores').slick({
+                dots: false,
+                infinite: true,
+                speed: 200,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    
+<section class="secction_tuapp">
+    <h1>Tu app de comercio internacional</h1>
+    <div class="content_tuapp">
+        <img src="images/tu app.jpeg" alt="tu app" class="img_tuapp">
+        <div>
+            <ul>
+                <li>Cotiza y contrata servicios 24/7</li>
+                <li>Múltiples orígenes y destinos</li>
+                <li>Proveedores verificados y efectivos</li>
+                <li>Tracking de operaciones</li>
+                <li>Notificaciones automatizadas</li>
+                <li>Canales de pago digital y facilidades</li>
+                <li>Asesoría personalizada</li>
+                <li>Servicios especializados en China para importadores</li>
+                <li>Exportación de productos a mercado Chino</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    
+
+
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr8f2d8FL3I2PZZ97SdgEqqnmzpEUHG6Y&callback=initMap"
+        async defer></script>
+    <script>
+        let map;
+
+        function initMap() {
+            const styledMapType = new google.maps.StyledMapType(
+                [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e74c3c" // Rojo para la tierra
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#ffffff" // Texto blanco
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#e74c3c" // Borde de texto rojo
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#fe4c1c" // Rojo para la tierra
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#FFFFFF" // Azul para el agua
+                            }
+                        ]
+                    }
+                ],
+                { name: 'Mapa Estilizado' }
+            );
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 0, lng: 0 }, // Centro del mapa (latitud y longitud)
+                zoom: 2, // Nivel de zoom inicial
+                mapTypeControlOptions: {
+                    mapTypeIds: ['styled_map']
+                }
+            });
+
+            map.mapTypes.set('styled_map', styledMapType);
+            map.setMapTypeId('styled_map');
+
+            // Marcadores para China, Estados Unidos, Colombia y Ecuador
+            addMarker({ lat: 35.8617, lng: 104.1954 }, "China", "red"); // Marcador rojo
+            addMarker({ lat: 37.0902, lng: -95.7129 }, "Estados Unidos", "blue"); // Marcador azul
+            addMarker({ lat: 4.5709, lng: -74.2973 }, "Colombia", "green"); // Marcador verde
+            addMarker({ lat: -1.8312, lng: -78.1834 }, "Ecuador", "yellow"); // Marcador amarillo
+        }
+
+        function addMarker(location, title, color) {
+            let marker = new google.maps.Marker({
+                position: location,
+                map,
+                title: title,
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 8,
+                    fillColor: color,
+                    fillOpacity: 1,
+                    strokeColor: 'white',
+                    strokeWeight: 3,
+                }
+            });
+        }
+    </script>
+
+
+
+
+
+<script>
+    window.onload = function () {
+        const texts = document.querySelectorAll('.text-container h1');
+
+        // Duplica los cajones para crear un scroll infinito
+        const cajonesScroll = document.querySelector('.titulos_slider');
+        cajonesScroll.innerHTML += cajonesScroll.innerHTML;
+
+
+
+        // Función para manejar el reinicio de la animación
+        function restartAnimation() {
+            // Reinicia la animación de scroll horizontal
+            cajonesScroll.style.animation = 'none';
+            cajonesScroll.offsetHeight; /* Activa un repaint, sin esto la animación no se reinicia */
+            cajonesScroll.style.animation = 'scroll 0s linear infinite';
+        }
+
+        // Escucha el evento 'animationiteration' para reiniciar la animación
+        cajonesScroll.addEventListener('animationiteration', restartAnimation);
+
+        // Función para mostrar y ocultar los textos
+        async function animateTexts() {
+            while (true) {
+                for (let i = 0; i < texts.length; i++) {
+                    texts[i].style.opacity = '1'; // Mostrar el h1
+                    await new Promise(resolve => setTimeout(resolve, 3000)); // Esperar 2 segundos
+                    texts[i].style.opacity = '0'; // Ocultar el h1
+                    await new Promise(resolve => setTimeout(resolve, 500)); // Esperar medio segundo
+                }
+            }
+        }
+
+        // Inicia la animación de los textos
+        animateTexts();
+    };
+
+</script>
+
+
+
+    
+
+<!--listo-->
+
+
+
+<footer class="footer">
+    <div class="links_footer">
+        <a href="mailto:hola@importaapp.com" class="footer-link">hola@importaapp.com</a>
+        <a href="mailto:hola@importaapp.com" class="footer-link">hola@importaapp.com</a>
+        <a href="https://api.whatsapp.com/send?phone=593980029920" class="footer-link">Móvil: +593 098 002 9920</a>
+    </div>
+    <p>Cuenca - Quito - Ecuador</p>
+    <div class="footer-logos">
+        <img src="images/ecuador_logo.png" alt="Ecuador Flag" class="footer-logo">
+        <img src="images/colombia_logo.png" alt="Colombia Flag" class="footer-logo">
+        <img src="images/china_logo.png" alt="China Flag" class="footer-logo">
+        <img src="images/usa_logo.png" alt="USA Flag" class="footer-logo">
+    </div>
+</footer>
+
+
+</body>
+
+</html>

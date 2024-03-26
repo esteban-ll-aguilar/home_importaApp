@@ -1,0 +1,47 @@
+.colaboradores {
+    text-align: center;
+    /*tod  el tamano horizontal*/
+    width: 100%;
+}
+
+.colaboradores h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.logos_colaboradores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    overflow: hidden; /* Oculta los logotipos que están fuera de la vista */
+}
+
+.logos_colaboradores div {
+    flex: 0 0 auto; /* Permite que los elementos flexibles se ajusten automáticamente */
+    padding: 0 10px; /* Espaciado entre los logotipos */
+}
+
+.logo-img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Media queries para hacer el carrusel responsive */
+@media screen and (max-width: 768px) {
+    .logos_colaboradores {
+        height: auto; /* Cambia la altura a automática para mostrar todos los logotipos */
+        flex-wrap: wrap; /* Permite que los logotipos se envuelvan en varias líneas */
+    }
+
+    .logos_colaboradores div {
+        flex: 0 0 50%; /* Muestra 2 logotipos por fila en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logos_colaboradores div {
+        flex: 0 0 100%; /* Muestra 1 logotipo por fila en dispositivos móviles */
+    }
+}

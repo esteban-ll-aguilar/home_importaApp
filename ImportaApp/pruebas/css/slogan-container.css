@@ -1,0 +1,57 @@
+
+/* Contenedor del eslogan */
+.slogan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el texto del eslogan */
+.slogan-container strong {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón de cotización */
+.cotiza-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cotiza-button img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .slogan-container {
+        margin: 15px;
+    }
+
+    .slogan-container strong {
+        font-size: 1.2rem;
+    }
+
+    .cotiza-button {
+        padding: 0 16px;
+    }
+
+    .cotiza-button img {
+        width: 80px;
+        height: 64px;
+        margin-right: 8px;
+    }
+}

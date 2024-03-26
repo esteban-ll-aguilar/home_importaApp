@@ -1,0 +1,112 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.planet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fondo animado */
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #6c6c6c, #ffffff, #6c6c6c, #fefefe, #6c6c6c);
+    background-size: 400% 400%;
+    animation: moveGradient 4s linear infinite;
+}
+
+/* Texto */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    white-space: nowrap;
+}
+
+.text-container p {
+    color: white;
+    transition: opacity 1s ease;
+    margin-bottom: 10px;
+}
+
+/* Imagen del planeta */
+.div_planeta img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Animación de fondo */
+@keyframes moveGradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animación de scroll horizontal */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+    .planet-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-container {
+        width: 50%;
+        padding: 0 20px;
+    }
+
+    .div_planeta {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .text-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.titulos {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}

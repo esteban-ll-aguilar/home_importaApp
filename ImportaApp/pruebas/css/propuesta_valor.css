@@ -1,0 +1,32 @@
+
+.propuesta-valor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cotiza_propuesta_valor {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.cotiza_propuesta_valor_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.cotiza_propuesta_valor_button:hover {
+    background-color: #e9e9e9;
+}
+
+.logo_img_propuesta_valor {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}

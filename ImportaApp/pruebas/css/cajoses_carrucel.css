@@ -1,0 +1,43 @@
+.div_cajones ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+    justify-content: center;
+}
+
+.div_cajones li {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 200px; /* Establece un ancho mínimo para cada cajón */
+}
+
+.imagen_cajon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.imagen_cajon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.div_cajones h1, .div_cajones p {
+    margin: 5px 0;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .div_cajones li {
+        flex-basis: 100%; /* Establece que cada cajón ocupe el 100% del ancho */
+    }
+}

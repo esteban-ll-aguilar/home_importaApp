@@ -1,0 +1,92 @@
+/* Sección de beneficios */
+.benefitsSection {
+    background: linear-gradient(45deg, #0D1E28, #e32b2b);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* Alinear los elementos verticalmente */
+    align-items: center;
+    padding: 20px;
+}
+.benefitsSection h2 {
+    color: #E5172A;
+}
+/* Título de beneficios */
+.benefitsSection h1 {
+    font-size: 2.5em; /* Cambiado de h2 a h1 para ser más semántico */
+    margin-bottom: 20px;
+
+}
+
+/* Contenedor de contenido de beneficios */
+.benefitsContentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alineación ajustada para que los elementos no estén tan pegados */
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Imagen de beneficios */
+.benefitsImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de beneficios */
+.benefitsList {
+    list-style-type: circle;
+    margin-left: 35px;
+    padding: 0;
+}
+
+.benefitsListItem {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Caja de beneficios individual */
+.benefitBox {
+    background: #f9f9f9; /* Cambiado a un tono más claro */
+    color: #333; /* Cambiado a un color más oscuro para mejorar la legibilidad */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajustado el sombreado */
+    margin: 10px;
+    text-align: center;
+}
+
+/* Destacado de beneficios */
+.benefitHighlight {
+    font-size: 2em;
+    margin: 0;
+    color: #e5172a;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .benefitsSection {
+        padding: 10px;
+        justify-content: center;
+    }
+    .benefitsSection h1 {
+        font-size: 2em;
+    }
+
+    .benefitsImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    .benefitBox {
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .benefitHighlight {
+        font-size: 1.5em;
+    }
+}
