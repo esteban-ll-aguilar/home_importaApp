@@ -13,48 +13,61 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden; /* Oculta los logotipos que están fuera de la vista */
-    height: auto; /* Ajusta la altura automáticamente al contenido */
-    margin-bottom: 20px; /* Agrega un margen inferior para separar del texto */
-    
+    overflow: hidden;
+    /* Oculta los logotipos que están fuera de la vista */
+    height: auto;
+    /* Ajusta la altura automáticamente al contenido */
+    margin-bottom: 20px;
+    /* Agrega un margen inferior para separar del texto */
+
 }
 
-
 .logos_colaboradores div {
-    flex: 0 0 auto; /* Permite que los elementos flexibles se ajusten automáticamente */
-    padding: 0 10px; /* Espaciado entre los logotipos */
-    margin: 10px; /* Agrega margen entre los logotipos */
-    border-radius: 5px; /* Añade bordes redondeados a los logotipos */
+    flex: 0 0 auto;
+    /* Permite que los elementos flexibles se ajusten automáticamente */
+    padding: 0 10px;
+    /* Espaciado entre los logotipos */
+    margin: 10px;
+    /* Agrega margen entre los logotipos */
+    border-radius: 5px;
+    /* Añade bordes redondeados a los logotipos */
 }
 
 .logo-img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 150px;
 }
 
 /* Media queries para hacer el carrusel responsive */
 @media screen and (max-width: 768px) {
     .logos_colaboradores {
-        height: auto; /* Cambia la altura a automática para mostrar todos los logotipos */
-        flex-wrap: wrap; /* Permite que los logotipos se envuelvan en varias líneas */
+        height: auto;
+        /* Cambia la altura a automática para mostrar todos los logotipos */
+        flex-wrap: wrap;
+        /* Permite que los logotipos se envuelvan en varias líneas */
     }
+
     .logo-img {
-        max-width: 80px; /* Reduce el tamaño de los logotipos en pantallas pequeñas */
+        max-width: 80px;
+        /* Reduce el tamaño de los logotipos en pantallas pequeñas */
         max-height: 80px;
     }
+
     .logos_colaboradores div {
-        flex: 0 0 50%; /* Muestra 2 logotipos por fila en pantallas pequeñas */
+        flex: 0 0 50%;
+        /* Muestra 2 logotipos por fila en pantallas pequeñas */
     }
 }
 
 @media screen and (max-width: 480px) {
     .logos_colaboradores div {
-        flex: 0 0 100%; /* Muestra 1 logotipo por fila en dispositivos móviles */
+        flex: 0 0 100%;
+        /* Muestra 1 logotipo por fila en dispositivos móviles */
     }
+
     .logo-img {
-        max-width: 60px; /* Reduce aún más el tamaño de los logotipos en dispositivos móviles */
+        max-width: 60px;
+        /* Reduce aún más el tamaño de los logotipos en dispositivos móviles */
         max-height: 60px;
     }
 }
-
-

@@ -7,19 +7,22 @@ header {
     color: #fff;
 }
 
-.header-left, .header-right {
+.header-left,
+.header-right {
     display: flex;
     align-items: center;
+    padding-right: 30px;
 }
 
 .header-center {
     text-align: center;
     font-size: 10px;
     flex-grow: 1;
+    align-items: center;
 }
 
 .image_logo {
-    width: 150px;
+    width: 230px;
     height: auto;
     margin-right: 10px;
 }
@@ -31,12 +34,13 @@ header {
 }
 
 .login-button {
-    padding: 10px 20px;
+    padding: 10px 20px 10px 20px;
     background-color: #fe4c1c;
     color: #fff;
     text-decoration: none;
     border-radius: 10px;
 }
+
 /* Media query para hacer el header responsive */
 @media screen and (max-width: 768px) {
     .image_logo {

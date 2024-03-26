@@ -6,7 +6,7 @@ function animateTexts() {
     function showNextText() {
         textContainer.textContent = texts[index];
         gsap.fromTo(textContainer, { opacity: 0 }, { opacity: 1, duration: 1 });
-        gsap.to(textContainer, { opacity: 0, duration: 0.5, delay: 1 });
+        gsap.to(textContainer, { opacity: 0, duration: 2, delay: 1 });
         index = (index + 1) % texts.length; // Avanzar al siguiente texto circularmente
     }
 

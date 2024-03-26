@@ -1,24 +1,33 @@
-
+/* TODO: HACER QUE LOS BOTONES ESTEN EN EXTREMOS */
 .propuesta-valor {
     text-align: center;
     margin-top: 20px;
 }
 
+
 .cotiza_propuesta_valor {
     display: inline-block;
     margin: 20px;
     cursor: pointer;
+    /* align-items: flex-start; */
 }
 
 .cotiza_propuesta_valor_button {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
     align-items: center;
-    padding: 10px;
+    padding: 5px;
+    padding-right: 40px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #fe4c1c;
     transition: background-color 0.3s;
+}
+
+.cotiza_propuesta_valor_button strong {
+
+    color: white;
 }
 
 .cotiza_propuesta_valor_button:hover {

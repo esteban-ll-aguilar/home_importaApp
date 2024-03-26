@@ -1,5 +1,5 @@
 .secction_tuapp {
-    background: linear-gradient(45deg, #0D1E28, #e32b2b);
+    background: linear-gradient(45deg, rgb(9, 11, 12), #e32b2b);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -7,6 +7,7 @@
     align-items: center;
     padding: 20px;
 }
+
 .content_tuapp {
     display: flex;
     justify-content: space-around;
@@ -14,27 +15,38 @@
     width: 100%;
     max-width: 1200px;
     margin-top: 20px;
-    height: auto; /* Cambiar la altura a automática para ajustarse al contenido */
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+    height: auto;
+    /* Cambiar la altura a automática para ajustarse al contenido */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan en varias líneas */
 }
+
 .img_tuapp {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
-.secction_tuapp h1{
+
+.secction_tuapp h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    align-items: center;
 }
+
 .secction_tuapp ul {
     list-style-type: circle;
-    margin-left: 35px;
-    padding: 0;
+    margin-left: 40px;
+    align-items: center;
+    padding-bottom: 40px;
 }
+
 .secction_tuapp li {
     margin: 10px 0;
     font-size: 1.2em;
+
+    padding-bottom: 10px;
 }
 
 /* Media query para ajustar el tamaño de la imagen en pantallas más pequeñas */
@@ -50,6 +62,7 @@
     .secction_tuapp ul {
         margin-left: 20px;
     }
+
     .secction_tuapp li {
         font-size: 1em;
     }
