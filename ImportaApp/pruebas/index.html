@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="css/osito.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <style>
         /* Estilos para el mapa */
@@ -157,26 +159,9 @@ Copy code
     <div class="propuesta-valor">
         <h1>Somos tu departamento de comercio de exterior</h1>
         <br>
-        <div class="cotiza_propuesta_valor" onclick="window.location.href='form_w.html';">
-            <div class="cotiza_propuesta_valor_button">
-                <img src="images/logo_1.png" alt="Logo" class="logo_img_propuesta_valor">
-                <span><strong>Importador / Exportador</strong></span>
-            </div>
-        </div>
-    
-        <div class="cotiza_propuesta_valor" onclick="window.location.href='form_operator_log.html';">
-            <div class="cotiza_propuesta_valor_button">
-                <img src="images/logo_work.png" alt="Logo" class="logo_img_propuesta_valor">
-                <span><strong>Aliado Operador</strong></span>
-            </div>
-        </div>
-    </div>
-    
-<!-- infinite scroll slider de logos-->
+        <!-- infinite scroll slider de logos-->
 
     <div class="colaboradores">
-        <h1>Nuestros Colaboradores</h1>
-    
         <div class="logos_colaboradores">
             <div>
                 <a href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop">
@@ -210,39 +195,26 @@ Copy code
             </div>
         </div>
     </div>
+    <!-- end infinite scroll slider de logos-->
+        <div class="cotiza_propuesta_valor" onclick="window.location.href='form_w.html';">
+            <div class="cotiza_propuesta_valor_button">
+                <img src="images/logo_1.png" alt="Logo" class="logo_img_propuesta_valor">
+                <span><strong>Importador / Exportador</strong></span>
+            </div>
+        </div>
+    
+        <div class="cotiza_propuesta_valor" onclick="window.location.href='form_operator_log.html';">
+            <div class="cotiza_propuesta_valor_button">
+                <img src="images/logo_work.png" alt="Logo" class="logo_img_propuesta_valor">
+                <span><strong>Aliado Operador</strong></span>
+            </div>
+        </div>
+    </div>
+    
+
 
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.logos_colaboradores').slick({
-                dots: false,
-                infinite: true,
-                speed: 200,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
+    
 
     
 <section class="secction_tuapp">
@@ -354,7 +326,7 @@ Copy code
 <script src="js/mapa.js"></script>
 <script src="js/animacion_titulos.js"></script>
 <script src="js/cajones_carrucel_servicio.js"></script>
-
+<script src="js/colaboladores.js"></script>
 </body>
 
 </html>
