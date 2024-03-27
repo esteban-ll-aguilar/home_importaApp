@@ -26,6 +26,17 @@
     /* Espaciado de línea adecuado */
 }
 
+.tu-clase-de-imagen {
+    width: 250px;
+
+    /* Para asegurar que la imagen no sea demasiado grande */
+    display: block;
+    /* Para que la imagen ocupe su propia línea */
+    margin: 20px auto;
+    /* Para centrar la imagen y agregar algo de espacio alrededor */
+}
+
+
 /* Estilos para el botón de cotización */
 .cotiza-button {
     display: flex;
