@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImportaApp</title>
+    <title>Importa App</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/header_behavior.js"></script>
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Slick Carousel JS -->
@@ -17,6 +18,8 @@
 
     <!-- <link rel="stylesheet" href="pruebas/styles.css"> -->
     <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/planeta.css">
     <link rel="stylesheet" href="css/slogan-container.css">
@@ -43,6 +46,7 @@
         h2 {
             font-family: 'Montserrat', sans-serif;
         }
+
         p {
             font-family: 'Raleway', sans-serif;
         }
@@ -55,20 +59,51 @@
 
     <!--TODo: Arreglado, falta poco responsive HEADER-->
 
+<<<<<<< HEAD
     <header>
         <div class="header-left" id="importaapp">
             <img src="images/Logo Transparente letra blanca.png" alt="Company Logo" class="image_logo">
+=======
+    <header class="header">
+        <div class="header-section header-left">
+            <img src="images/Logo Transparente letra blanca.png" alt="Company Logo" class="header-logo">
+>>>>>>> developed
         </div>
         <div class="header-center">
-            <h1>24/7</h1>
+            <p>24/7</p>
         </div>
-        <a href="https://api.whatsapp.com/send?phone=593980029920" target="_blank">
-            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" class="whatsapp_header_logo">
-        </a>
-        <div class="header-right">
-            <a href="https://app.importaapp.com/" class="login-button"><strong class="stronf">Login</strong></a>
+        <div class="header-centerU">
+            <p>hola@importaapp.com</p>
+        </div>
+
+        <div class="header-centerUnion">
+
+            <a href="https://www.facebook.com/Importaapp?mibextid=ZbWKwL" target="_blank" class="lead text-dark"
+                rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
+                <i class="fab fa-facebook fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+            </a>
+            <a href="https://www.instagram.com/importaapp/" target="_blank" class="lead text-dark"
+                rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
+                <i class="fab fa-instagram fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+            </a>
+            <a href="https://www.tiktok.com/@importaapp" target="_blank" class="lead text-dark"
+                rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
+                <i class="fab fa-tiktok fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+            </a>
+            <a href="https://www.linkedin.com/company/importaapp/" target="_blank" class="lead text-dark"
+                rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
+                <i class="fab fa-linkedin fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=593980029920&text&app_absent=0" target="_blank"
+                class="lead text-dark" rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
+                <i class="fab fa-whatsapp fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+            </a>
+        </div>
+        <div class="header-section header-right">
+            <a href="https://app.importaapp.com/" class="auth-button"><strong>Login</strong></a>
         </div>
     </header>
+
 
     <!--TOD: Arreglado PLANETA-->
 
@@ -85,7 +120,10 @@
     <!--TOD: Arreglado SLOGAN JUNTO A BOTTON-->
 
     <div class="slogan-container">
-        <h1>¡Importa ahora y exporta fácil, rápido y seguro! No necesitas ser un experto.</h1>
+        <h1>¡Importa y exporta fácil, rápido y seguro! No necesitas ser un experto.</h1>
+        <br>
+        <br>
+        <br>
         <a href="tonelaje.com">
             <div class="cotiza-button">
                 <!-- enlace -->
@@ -123,34 +161,35 @@
 
     <section class="section_cajones">
         <div class="div_con_cajones">
-                <div class="div_cajon">
-                        <img src="images/Proveedores.png" alt="Proveedores" class="img_cajon">
-                        <h1>PROVEEDORES</h1>
-                    <p>Compra directo a fabricantes confiables y efectivos</p>
-                </div>
-                <div class="div_cajon">
-                        <img class="img_cajon" src="images/Operaciones.jpeg" alt="Operaciones">
-                        <h1>OPERACIONES</h1>
-                    <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
-                </div>
-                <div class="div_cajon">
-                        <img class="img_cajon" src="images/Trazabilidad.png" alt="Trazabilidad">
-                        <h1>TRAZABILIDAD</h1>
-                    <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga.</p>
-                </div>
-                <div class="div_cajon">
-                        <img class="img_cajon" src="images/tu app.jpeg" alt="Arribo y Nacionalización">
-                        <h1>ARRIBO Y NACIONALIZACIÓN</h1>
-                    <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera.</p>
-                </div>
-                <div class="div_cajon">
-                        <img class="img_cajon" src="images/Servicios.png" alt="Servicios">
-                        <h1>SERVICIOS</h1>
-                    <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de proveedores y análisis de riesgo.</p>
-                </div>
+            <div class="div_cajon">
+                <img src="images/Proveedores.png" alt="Proveedores" class="img_cajon">
+                <h1>PROVEEDORES</h1>
+                <p>Compra directo a fabricantes confiables y efectivos</p>
+            </div>
+            <div class="div_cajon">
+                <img class="img_cajon" src="images/Operaciones.jpeg" alt="Operaciones">
+                <h1>OPERACIONES</h1>
+                <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
+            </div>
+            <div class="div_cajon">
+                <img class="img_cajon" src="images/Trazabilidad.png" alt="Trazabilidad">
+                <h1>TRAZABILIDAD</h1>
+                <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga.</p>
+            </div>
+            <div class="div_cajon">
+                <img class="img_cajon" src="images/tu app.jpeg" alt="Arribo y Nacionalización">
+                <h1>ARRIBO Y NACIONALIZACIÓN</h1>
+                <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera.</p>
+            </div>
+            <div class="div_cajon">
+                <img class="img_cajon" src="images/Servicios.png" alt="Servicios">
+                <h1>SERVICIOS</h1>
+                <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de
+                    proveedores y análisis de riesgo.</p>
+            </div>
         </div>
     </section>
-    
+
 
 
 

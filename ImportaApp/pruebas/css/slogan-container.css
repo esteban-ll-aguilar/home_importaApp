@@ -18,11 +18,11 @@
 /* Estilos para el texto del eslogan */
 .slogan-container strong {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-bottom: 10px;
     color: #333;
     /* Color de texto oscuro */
-    line-height: 1.5;
+    line-height: 1.0;
     /* Espaciado de línea adecuado */
 }
 
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     background-color: #FE4C1C;
     color: white;
     border-radius: 20px;
@@ -52,9 +52,9 @@ a {
 }
 
 .cotiza-button img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 0px;
 }
 
 /* Media queries para pantallas más pequeñas */
