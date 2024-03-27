@@ -26,17 +26,24 @@ h2 {
     color: #333;
 }
 
+/* Alinear los elementos del formulario */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 
 input[type="submit"] {
     background-color: #FE4C1C;
@@ -51,4 +58,40 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #e5172a;
+}
+
+/* Estilos para pantallas grandes */
+
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: 300px;
+        padding: 10px;
+    }
+    input[type="submit"] {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 360px) {
+    .container {
+        max-width: 280px;
+        padding: 8px;
+    }
+    input[type="submit"] {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    label {
+        font-size: 0.9em;
+    }
 }
