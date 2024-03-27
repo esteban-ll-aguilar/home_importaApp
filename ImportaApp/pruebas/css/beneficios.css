@@ -1,6 +1,6 @@
 /* Sección de beneficios */
 .benefitsSection {
-    background: linear-gradient(45deg, #0D1E28, #e32b2b);
+    background: linear-gradient(-25deg, #ffffff,#ebe9e9,#fedbdb, #e07474, #d72424);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -46,10 +46,10 @@
 
 /* Imagen de beneficios */
 .benefitsImage {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
 }
 
 /* Media queries para pantallas más pequeñas */
