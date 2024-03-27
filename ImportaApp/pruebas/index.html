@@ -28,11 +28,13 @@
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/cajones.css">
     <link rel="stylesheet" href="css/osito.css">
+    <!--Scripts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <style>
         /* Estilos para el mapa */
@@ -54,7 +56,7 @@
     <!--TODo: Arreglado, falta poco responsive HEADER-->
 
     <header>
-        <div class="header-left">
+        <div class="header-left" id="importaapp">
             <img src="images/Logo Transparente letra blanca.png" alt="Company Logo" class="image_logo">
         </div>
         <div class="header-center">
@@ -263,24 +265,7 @@
 
 
 
-    <!--OSITO-->
-    <div class="dialogueBox" id="dialogue">
-        <div class="userMsg">
-            <img src="images/default.jpeg" alt="User">
-            <p>¿A qué se dedican?</p>
-        </div>
-        <div class="botReply">
-            <p>Nos dedicamos a ayudar a empresas y personas que desean importar y exportar.</p>
-            <img src="images/osito.png" alt="Bot">
-        </div>
-    </div>
-    <div class="animationWrapper" id="interaction">
-        <p>Haz clic aquí!</p>
-        <img src="images/osito.png" class="backgroundImg">
-        <div class="dot"></div>
-        <div class="dot2"></div>
-    </div>
-    <a class="fixed-button" href="#div_header_logo">↑</a>
+    
 
 
     <div class="slogan-container">
@@ -294,30 +279,6 @@
         </a>
 
     </div>
-    <script>
-        var interaction = document.getElementById("interaction");
-        var dialogue = document.getElementById("dialogue");
-
-        function showDialogue() {
-            dialogue.style.display = "flex";
-            setTimeout(function () {
-                dialogue.style.opacity = "1";
-            }, 50);
-        }
-
-        function hideDialogue() {
-            dialogue.style.opacity = "0";
-            setTimeout(function () {
-                dialogue.style.display = "none";
-            }, 300);
-        }
-
-        interaction.addEventListener("mouseenter", showDialogue);
-        interaction.addEventListener("mouseleave", hideDialogue);
-    </script>
-
-
-
 
 
     <div class="map-container">
@@ -334,7 +295,27 @@
 
 
 
-
+    <!--OSITO-->
+    <div class="animationWrapper" id="interaction">
+        <p>¡Click!</p>
+        <img src="images/osito.png" class="backgroundImg">
+        <div class="dot"></div>
+        <div class="dot2"></div>
+    </div>
+    
+    <div class="dialogueBox" id="dialogue">
+        <div class="userMsg">
+            <img src="images/default.jpeg" alt="User">
+            <p>¿A qué se dedican?</p>
+        </div>
+        <div class="botReply">
+            <p>Nos dedicamos a ayudar a empresas y personas que desean importar y exportar.</p>
+            <img src="images/osito.png" alt="Bot">
+        </div>
+    </div>
+    
+    
+    <a class="fixed-button" href="#importaapp">↑</a>
 
 
 
@@ -366,6 +347,7 @@
     <script src="js/animacion_titulos.js"></script>
     <script src="js/cajones_carrucel_servicio.js"></script>
     <script src="js/colaboladores.js"></script>
+    <script src="js/osito.js"></script>
 </body>
 
 </html>
