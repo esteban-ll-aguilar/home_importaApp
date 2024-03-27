@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -12,8 +11,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-select, input{
-    /*en negrita*/
+select, input {
     font-weight: bold;
 }
 h2 {
@@ -45,4 +43,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #e5172a;
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    input[type="submit"] {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
 }

@@ -1,0 +1,23 @@
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.fixed-button:hover {
+    background-color: #0056b3;
+}
+
+#arrow {
+    transition: transform 0.3s;
+}
+
+.complete {
+    transform: translateY(100%);
+}
