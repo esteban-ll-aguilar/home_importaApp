@@ -4,7 +4,6 @@
     text-align: center;
     padding: 20px;
 }
-
 .links_footer {
     display: flex;
     flex-wrap: wrap;
@@ -22,9 +21,10 @@
 .footer-link:hover {
     color: #fe4c1c;
 }
-.footer-link p{
+footer.footer p {
     font-family: 'Raleway', sans-serif;
 }
+
 
 .footer-logos {
     display: flex;

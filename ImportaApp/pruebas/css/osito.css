@@ -11,6 +11,7 @@
       border-radius: 10px;
       transition: opacity 0.3s ease;
       opacity: 0;
+      font-family: "Raleway", sans-serif;
     }
     .animationWrapper {
       background-color: #e5172a;
