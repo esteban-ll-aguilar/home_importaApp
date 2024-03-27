@@ -1,18 +1,31 @@
-.dialogueBox {
+    .dialogueBox {
       background-color: #c0a9a9;
       display: none;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 40%;
-      position: absolute;
-      bottom: 60px; /* Ajuste para que esté más arriba del botón */
+      position: fixed;
+      bottom: 120px; /* Ajuste para que esté más arriba del botón */
       left: 20px;
       border-radius: 10px;
       transition: opacity 0.3s ease;
       opacity: 0;
     }
-
+    .animationWrapper {
+      background-color: #e5172a;
+      position: fixed;
+      color: white;
+      border-radius: 10px;
+      bottom: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 150px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
     .dialogueBox .userMsg,
     .dialogueBox .botReply {
       display: flex;
@@ -38,24 +51,21 @@
       margin: 5px;
     }
 
-    .animationWrapper {
-      background-color: #e5172a;
-      position: fixed;
-      border-radius: 10px;
-      bottom: 0;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      line-height: 150px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-    }
 
+    .dialogueBox {
+      /* Mantener los estilos existentes */
+      z-index: 1; /* Asegurar que el diálogo esté por encima de la animación */
+    }
+    
+    .animationWrapper {
+      /* Mantener los estilos existentes */
+      z-index: 0; /* Asegurar que la animación esté detrás del diálogo */
+    }
+    
     .dot,
     .dot2 {
       border-radius: 50%;
-      background-color: black;
+      background-color: rgb(0, 0, 0);
       width: 10px;
       height: 10px;
       position: absolute;
@@ -91,11 +101,11 @@
     }
 
     .animationWrapper p {
-      color: white;
-      opacity: 0;
+      color: rgb(255, 0, 0);
     }
 
     .animationWrapper:hover p {
+      z-index: 1;
       opacity: 1;
     }
 
