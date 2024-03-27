@@ -4,7 +4,9 @@
     margin-top: 20px;
 }
 
-
+.propuesta-valor p {
+    font-family: 'Raleway', sans-serif;
+}
 .cotiza_propuesta_valor {
     display: inline-block;
     margin: 20px;

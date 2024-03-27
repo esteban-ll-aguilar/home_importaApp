@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #e5172a;
     color: white;
     padding: 10px;
     border-radius: 50%;
@@ -11,7 +11,7 @@
 }
 
 .fixed-button:hover {
-    background-color: #0056b3;
+    background-color: #860a17;
 }
 
 #arrow {

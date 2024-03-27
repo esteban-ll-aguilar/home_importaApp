@@ -1,6 +1,5 @@
 .colaboradores {
     text-align: center;
-    /*tod  el tamano horizontal*/
     width: 100%;
 }
 
@@ -11,63 +10,42 @@
 
 .logos_colaboradores {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
-    /* Oculta los logotipos que están fuera de la vista */
-    height: auto;
-    /* Ajusta la altura automáticamente al contenido */
     margin-bottom: 20px;
-    /* Agrega un margen inferior para separar del texto */
-
 }
 
 .logos_colaboradores div {
     flex: 0 0 auto;
-    /* Permite que los elementos flexibles se ajusten automáticamente */
     padding: 0 10px;
-    /* Espaciado entre los logotipos */
     margin: 10px;
-    /* Agrega margen entre los logotipos */
     border-radius: 5px;
-    /* Añade bordes redondeados a los logotipos */
 }
 
 .logo-img {
     max-width: 200px;
-    max-height: 150px;
 }
 
-/* Media queries para hacer el carrusel responsive */
-@media screen and (max-width: 768px) {
-    .logos_colaboradores {
-        height: auto;
-        /* Cambia la altura a automática para mostrar todos los logotipos */
-        flex-wrap: wrap;
-        /* Permite que los logotipos se envuelvan en varias líneas */
+@media screen and (min-width: 768px) {
+    .logos_colaboradores div {
+        flex: 0 0 33.33%;
     }
+}
 
-    .logo-img {
-        max-width: 80px;
-        /* Reduce el tamaño de los logotipos en pantallas pequeñas */
-        max-height: 80px;
-    }
-
+@media screen and (min-width: 480px) and (max-width: 767px) {
     .logos_colaboradores div {
         flex: 0 0 50%;
-        /* Muestra 2 logotipos por fila en pantallas pequeñas */
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
     .logos_colaboradores div {
         flex: 0 0 100%;
-        /* Muestra 1 logotipo por fila en dispositivos móviles */
     }
 
     .logo-img {
-        max-width: 60px;
-        /* Reduce aún más el tamaño de los logotipos en dispositivos móviles */
-        max-height: 60px;
+        max-width: 100px;
     }
 }

@@ -19,6 +19,12 @@
     margin: 0 10px;
     font-size: 1em;
 }
+.footer-link:hover {
+    color: #fe4c1c;
+}
+.footer-link p{
+    font-family: 'Raleway', sans-serif;
+}
 
 .footer-logos {
     display: flex;

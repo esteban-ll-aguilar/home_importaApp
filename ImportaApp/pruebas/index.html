@@ -48,9 +48,6 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        p {
-            font-family: 'Raleway', sans-serif;
-        }
     </style>
 </head>
 
@@ -60,8 +57,8 @@
 
     <!--TOD: Arreglado, falta poco responsive HEADER-->
 
-    <header class="header">
-        <div class="header-section header-left">
+    <header class="header" >
+        <div class="header-section header-left" id="top">
             <img src="images/Logo Transparente letra blanca.png" alt="Company Logo" class="header-logo">
         </div>
         <div class="header-center">
@@ -70,28 +67,26 @@
         <div class="header-centerU">
             <p>hola@importaapp.com</p>
         </div>
-
         <div class="header-centerUnion">
-
             <a href="https://www.facebook.com/Importaapp?mibextid=ZbWKwL" target="_blank" class="lead text-dark"
                 rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
-                <i class="fab fa-facebook fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+                <i class="fab fa-facebook fa-lg"></i>
             </a>
             <a href="https://www.instagram.com/importaapp/" target="_blank" class="lead text-dark"
                 rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
-                <i class="fab fa-instagram fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+                <i class="fab fa-instagram fa-lg"></i>
             </a>
             <a href="https://www.tiktok.com/@importaapp" target="_blank" class="lead text-dark"
                 rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
-                <i class="fab fa-tiktok fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+                <i class="fab fa-tiktok fa-lg"></i>
             </a>
             <a href="https://www.linkedin.com/company/importaapp/" target="_blank" class="lead text-dark"
                 rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
-                <i class="fab fa-linkedin fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+                <i class="fab fa-linkedin fa-lg"></i>
             </a>
             <a href="https://api.whatsapp.com/send/?phone=593980029920&text&app_absent=0" target="_blank"
                 class="lead text-dark" rel="noopener noreferrer" title="importaapp-whatsapp" style="color: black;">
-                <i class="fab fa-whatsapp fa-2x"></i> <!-- Aquí se añade la clase fa-2x para aumentar el tamaño -->
+                <i class="fab fa-whatsapp fa-lg"></i>
             </a>
         </div>
         <div class="header-section header-right">
@@ -100,14 +95,13 @@
             </a>
         </div>
     </header>
-
+    
 
     <!--TOD: Arreglado PLANETA-->
 
-    <div class="planet-container">
-        <br><br><br><br><br><br><br><br><br><br><br>
-
+    <div class="planet-container" >
         <div class="animated-bg animated-bg-planet"></div>
+        <br><br>
         <h1 class="text-container" style="font-size: 50px; text-align: start;"></h1>
         <div class="div_planeta">
             <img src="images/planet.png" alt="Planet Image">
@@ -239,12 +233,10 @@
         <br>
         <br>
         <br>
-
         <div class="colaboradores">
             <div class="logos_colaboradores">
                 <div>
-                    <a
-                        href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop">
+                    <a href="https://www.linkedin.com/posts/endeavorecuador_bienvenida-cohorte-d2s-2024-activity-7172954450658062337-pGYx?utm_source=share&utm_medium=member_desktop">
                         <img class="logo-img" src="logos/endeavor_logo.png" alt="Logo de Endeavor Ecuador" />
                     </a>
                 </div>
@@ -253,25 +245,18 @@
                         <img class="logo-img" src="logos/forbes_logo.png" alt="Logo de Forbes Ecuador" />
                     </a>
                 </div>
-
                 <div>
                     <a href="http://ec.mofcom.gov.cn/article/sqfb/202308/20230803425529.shtml">
                         <img class="logo-img" src="logos/embajada_china.png" alt="Logo de la Embajada China" />
                     </a>
                 </div>
-            </div>
-        </div>
-
-        <div class="colaboradores">
-            <div class="logos_colaboradores">
                 <div>
                     <a href="https://connectamericas.com/company/importa">
                         <img class="logo-img" src="logos/conect_america.png" alt="Logo de Coneect America" />
                     </a>
                 </div>
                 <div>
-                    <a
-                        href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/">
+                    <a href="https://emprelatam.com/2022/01/28/potentes-startups-latinoamericanas-seleccionadas-en-pre-aceleracion-de-emprelatam/">
                         <img class="logo-img" src="logos/emprelatam_logo.png" alt="Logo de Emprelatam" />
                     </a>
                 </div>
@@ -316,20 +301,23 @@
 
 
     <div class="slogan-container">
-        <h1>¡Importa y exporta fácil, rápido y seguro! No necesitas ser un experto.</>
+        <h1>¡Importa y exporta fácil, rápido y seguro! No necesitas ser un experto.</h1>
+        <a
+            href="https://app.importaapp.com/forms/contact-form?fbclid=IwAR2JhWHHNFnQ3497QrzmXRNlekXGeXDmklx2Lq8luSw35_1mBvjtSlkns6M">
             <br>
             <br>
+            <div class="cotiza-button">
+                <!-- enlace -->
+                <img src="images/logo_1.png" alt="Logo" class="logo-img">
+                <span>
+                    <p><b>Cotiza ahora</b></p>
+                </span>
+            </div>
             <br>
-            <a
-                href="https://app.importaapp.com/forms/contact-form?fbclid=IwAR2JhWHHNFnQ3497QrzmXRNlekXGeXDmklx2Lq8luSw35_1mBvjtSlkns6M">
-                <div class="cotiza-button">
-                    <!-- enlace -->
-                    <img src="images/logo_1.png" alt="Logo" class="logo-img">
-                    <span><strong>Cotiza ahora</strong></span>
-                </div>
+            <br>
+        </a>
+        <img src="images/oso_3d.png" alt="Descripción de la imagen" class="tu-clase-de-imagen">
 
-            </a>
-            <br>
     </div>
 
     <br>
@@ -373,10 +361,9 @@
     </div>
 
 
-    <a class="fixed-button" href="#importaapp">
+    <a class="fixed-button" href="#">
         <span id="arrow">&#9650;</span>
     </a>
-
 
 
 
@@ -389,9 +376,9 @@
 
     <footer class="footer">
         <div class="links_footer">
-            <a href="importaapp.com" class="footer-link">www.importaapp.com</a>
-            <a href="mailto:hola@importaapp.com" class="footer-link">hola@importaapp.com</a>
-            <a href="https://api.whatsapp.com/send?phone=593980029920" class="footer-link">Móvil: +593 098 002 9920</a>
+            <a href="importaapp.com" class="footer-link"><p>www.importaapp.com</p></a>
+            <a href="mailto:hola@importaapp.com" class="footer-link"><p>hola@importaapp.com</p></a>
+            <a href="https://api.whatsapp.com/send?phone=593980029920" class="footer-link"><p>Móvil: +593 098 002 9920</p></a>
         </div>
         <p>Cuenca - Quito - Ecuador</p>
         <div class="footer-logos">

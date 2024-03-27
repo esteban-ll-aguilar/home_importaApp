@@ -1,41 +1,35 @@
 /* Estilos generales */
-/* Header principal con animación */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* Asegura que el header esté sobre otros contenidos */
     transition: background-color 0.3s;
-    /* Suaviza el cambio de color */
     background-color: transparent;
-    /* Color inicial transparente */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Ajusta el logo y los elementos del header para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
     .header-logo {
         width: 100px;
-        /* Tamaño más pequeño del logo */
     }
 
     .header-section,
     .header-center,
-    .header-centerU,
-    .header-centerUnion {
+    .header-center-u,
+    .header-center-union {
         padding: 5px 10px;
-        /* Menor espaciado */
         font-size: 14px;
-        /* Tamaño de texto más pequeño */
     }
 }
 
-
+/* Animación de fondo */
 .header::before {
     content: '';
     position: absolute;
@@ -51,82 +45,51 @@
 
 .header-scrolled::before {
     background: #ffffff !important;
-    /* Nuevo fondo cuando se hace scroll */
 }
 
+/* Estilos para las secciones del header */
 .header-section {
     display: flex;
     align-items: start;
     justify-content: flex-start;
-    /* Ajusta según necesidad */
     padding-right: 30px;
     font-weight: bold;
     z-index: 1;
 }
 
-.header-center {
+/* Estilos para el centro del header */
+.header-center,
+.header-center-u,
+.header-center-union {
     display: flex;
-    /* Establece el modelo de caja flexible */
     align-items: center;
-    /* Centra los elementos verticalmente */
-    justify-content: flex-start;
-    /* Alinea los elementos al inicio de la fila */
-    /* Puedes ajustar el espaciado horizontal entre los elementos de texto con 'justify-content' */
 }
 
-.header-center p {
+/* Estilos para el texto del centro del header */
+.header-center p,
+.header-center-u p,
+.header-center-union p {
     margin: 0;
-    /* Elimina los márgenes por defecto */
     font-size: 22px;
-    /* padding: 10; */
-    /* Asegúrate de que no haya relleno adicional */
 }
 
-
-.whatsapp-icon {
-    font-size: 30px;
-    /* Ajusta el tamaño según tus necesidades */
-}
-
-.header-centerU p {
-    margin: 0;
-    /* Elimina los márgenes por defecto */
-    font-size: 23px;
-
-    padding: 0;
-    /* Asegúrate de que no haya relleno adicional */
-}
-
-
-
-
-.header-centerUnion {
-    display: flex;
-    /* Activa Flexbox */
-    justify-content: flex-start;
-    /* Alinea los elementos al inicio del contenedor */
-    align-items: center;
-    /* Centra los elementos verticalmente */
-}
-
-.header-centerUnion a {
+/* Estilos para los iconos de redes sociales */
+.header-center-union a {
     margin-left: 0;
-    /* Ajusta según sea necesario para alinear los puntos con los íconos */
     padding-left: 20px;
-    /* Ajusta el espacio entre los puntos y los íconos */
-    align-items: flex-start;
-    /* Otros estilos que desees aplicar a tus elementos <li> */
 }
 
-.header-centerUnion p {
-    margin: 0;
-    /* Elimina los márgenes por defecto */
-    font-size: 28px;
-    /* Establece el tamaño de fuente */
-    padding: 10px;
-    /* Asegúrate de que no haya relleno adicional */
+/* Estilos para el botón de autenticación */
+.auth-button {
+    padding: 10px 20px;
+    background-color: #fe4c1c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    z-index: 1;
 }
 
+/* Estilos para los logos */
 .header-logo {
     width: 230px;
     height: auto;
@@ -138,6 +101,19 @@
     height: 35px;
     margin-right: 5px;
 }
+
+/* Animación de fondo */
+@keyframes moveGradient {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
 
 .auth-button {
     padding: 10px 20px 10px 20px;
@@ -169,16 +145,5 @@
 
     .auth-button {
         margin-top: 10px;
-    }
-}
-
-/* Animación de fondo */
-@keyframes moveGradient {
-    0% {
-        background-position: 100% 100%;
-    }
-
-    100% {
-        background-position: 0 0;
     }
 }
