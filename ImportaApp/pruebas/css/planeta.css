@@ -25,7 +25,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(45deg, #6c6c6c, #ffffff, #6c6c6c, #fefefe, #6c6c6c);
+    background: linear-gradient(to right, #6c6c6c, #ffffff, #6c6c6c, #fefefe, #6c6c6c);
     background-size: 400% 400%;
     animation: moveGradient 4s linear infinite;
 }
@@ -65,10 +65,11 @@
 /* Animación de fondo */
 @keyframes moveGradient {
     0% {
-        background-position: 0 0;
-    }
-    100% {
         background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0 0;
     }
 }
 
@@ -77,6 +78,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
