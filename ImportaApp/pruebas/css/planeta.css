@@ -25,7 +25,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to right, #6c6c6c, #ffffff, #6c6c6c, #fefefe, #6c6c6c);
+    background: linear-gradient(to right, #6c6c6c, #ada8a8, #6c6c6c, #ada8a8, #6c6c6c);
     background-size: 400% 400%;
     animation: moveGradient 4s linear infinite;
 }
@@ -94,7 +94,8 @@
 
     .text-container {
         width: 50%;
-        padding: 0 20px;
+        padding: 60px 30px 60px 30px;
+        align-items: start;
     }
 
     .div_planeta {
