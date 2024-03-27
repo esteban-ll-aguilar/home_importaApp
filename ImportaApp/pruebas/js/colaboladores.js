@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/* $(document).ready(function(){
     $('.logos_colaboradores').slick({
         dots: false,
         infinite: true,
@@ -24,4 +24,4 @@ $(document).ready(function(){
             }
         ]
     });
-});
+}); */

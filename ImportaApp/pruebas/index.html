@@ -26,8 +26,9 @@
     <link rel="stylesheet" href="css/tu_app.css">
     <link rel="stylesheet" href="css/colaboradores.css">
     <link rel="stylesheet" href="css/map.css">
-    <link rel="stylesheet" href="css/cajones_carrucel.css">
+    <link rel="stylesheet" href="css/cajones.css">
     <link rel="stylesheet" href="css/osito.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -39,6 +40,9 @@
         h1,
         h2 {
             font-family: 'Montserrat', sans-serif;
+        }
+        p {
+            font-family: 'Raleway', sans-serif;
         }
     </style>
 </head>
@@ -79,7 +83,7 @@
     <!--TOD: Arreglado SLOGAN JUNTO A BOTTON-->
 
     <div class="slogan-container">
-        <strong>¡Importa ahora y exporta fácil, rápido y seguro! No necesitas ser un experto.</strong>
+        <h1>¡Importa ahora y exporta fácil, rápido y seguro! No necesitas ser un experto.</h1>
         <a href="tonelaje.com">
             <div class="cotiza-button">
                 <!-- enlace -->
@@ -116,48 +120,35 @@
     <!-- TODO: Cajones FALTA RESPONSIVE -->
 
     <section class="section_cajones">
-        <div class="div_cajones">
-            <ul class="slider">
-                <li>
-                    <figure class="imagen_cajon">
-                        <img src="images/Proveedores.png" alt="Proveedores">
-                        <figcaption>PROVEEDORES</figcaption>
-                    </figure>
+        <div class="div_con_cajones">
+                <div class="div_cajon">
+                        <img src="images/Proveedores.png" alt="Proveedores" class="img_cajon">
+                        <h1>PROVEEDORES</h1>
                     <p>Compra directo a fabricantes confiables y efectivos</p>
-                </li>
-                <li>
-                    <figure class="imagen_cajon">
-                        <img src="images/Operaciones.jpeg" alt="Operaciones">
-                        <figcaption>OPERACIONES</figcaption>
-                    </figure>
+                </div>
+                <div class="div_cajon">
+                        <img class="img_cajon" src="images/Operaciones.jpeg" alt="Operaciones">
+                        <h1>OPERACIONES</h1>
                     <p>Cotiza 24/7 en plataforma, recibe cotización de servicios logísticos con entrega en tus manos</p>
-                </li>
-                <li>
-                    <div class="imagen_cajon">
-                        <img src="images/Trazabilidad.png" alt="Trazabilidad">
-                    </div>
-                    <h1>TRAZABILIDAD</h1>
-                    <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga.
-                    </p>
-                </li>
-                <li>
-                    <div class="imagen_cajon">
-                        <img src="images/tu app.jpeg" alt="Arribo y Nacionalización">
-                    </div>
-                    <h1>ARRIBO Y NACIONALIZACION</h1>
+                </div>
+                <div class="div_cajon">
+                        <img class="img_cajon" src="images/Trazabilidad.png" alt="Trazabilidad">
+                        <h1>TRAZABILIDAD</h1>
+                    <p>Registro fotográfico de tu carga, confirmación de zarpe y notificaciones de tracking de carga.</p>
+                </div>
+                <div class="div_cajon">
+                        <img class="img_cajon" src="images/tu app.jpeg" alt="Arribo y Nacionalización">
+                        <h1>ARRIBO Y NACIONALIZACIÓN</h1>
                     <p>Gestión de aduana y nacionalización, gestión de impuestos, aforos, almacenera.</p>
-                </li>
-                <li>
-                    <div class="imagen_cajon">
-                        <img src="images/Servicios.png" alt="Servicios">
-                    </div>
-                    <h1>SERVICIOS</h1>
-                    <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de
-                        proveedores y análisis de riesgo.</p>
-                </li>
-            </ul>
+                </div>
+                <div class="div_cajon">
+                        <img class="img_cajon" src="images/Servicios.png" alt="Servicios">
+                        <h1>SERVICIOS</h1>
+                    <p>Auditoría de fábricas, control de calidad de producto, gestión de muestras, verificación de proveedores y análisis de riesgo.</p>
+                </div>
         </div>
     </section>
+    
 
 
 

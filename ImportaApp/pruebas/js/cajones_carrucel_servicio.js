@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -10,3 +10,4 @@ $(document).ready(function () {
         autoplaySpeed: 2000
     });
 });
+ */

@@ -1,0 +1,63 @@
+/* Estilo para la sección de cajones */
+.section_cajones {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los cajones se envuelvan en filas */
+    justify-content: center; /* Centrar los cajones */
+    padding: 20px;
+}
+.div_con_cajones {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los cajones se envuelvan en filas */
+    justify-content: space-around; /* Centrar los cajones */
+    padding: 20px;
+}
+/* Estilo para el título de cada cajón */
+.div_cajon h1 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    overflow: hidden; /* Evitar que el texto se salga del contenedor */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos si el texto es demasiado largo */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+}
+
+/* Estilo para el contenido de cada cajón */
+.div_cajon p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las imágenes de cada cajón */
+.img_cajon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada cajón individual */
+.div_cajon {
+    background: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    flex: 0 0 calc(50% - 20px); /* Ajuste para que haya dos cajones por fila */
+    max-width: calc(50% - 20px); /* Ajuste para que haya dos cajones por fila */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .div_cajon {
+        flex: 0 0 calc(100% - 20px); /* Ajuste para que haya un cajón por fila */
+        max-width: calc(100% - 20px); /* Ajuste para que haya un cajón por fila */
+    }
+
+    .img_cajon {
+        width: 150px;
+        height: 150px;
+    }
+}
