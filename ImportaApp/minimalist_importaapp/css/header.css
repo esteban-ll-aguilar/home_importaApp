@@ -1,0 +1,279 @@
+/* Estilos generales */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header-responsive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.column-log {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    /* Cambiado a column para alinear los elementos verticalmente */
+    align-items: flex-start;
+    /* Alinea los elementos a la izquierda */
+    padding: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.row-log {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    /* Cambiado a column para alinear los elementos verticalmente */
+    align-items: flex-start;
+    /* Alinea los elementos a la izquierda */
+    padding: 20px;
+    padding-left: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.row-button {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* Cambiado a column para alinear los elementos verticalmente */
+
+    /* Alinea los elementos a la izquierda */
+    font-family: 'Raleway', sans-serif;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-start;
+    /* Alinea los elementos a la izquierda */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    margin-bottom: 10px;
+    /* Espacio entre el top y el logo */
+}
+
+.header-24-7 p {
+    font-weight: bold;
+    /* Esto hará que el texto sea negrita */
+    /* Puedes agregar más estilos aquí si lo deseas */
+}
+
+.header-24-7,
+.header-socials {
+    margin-right: 20px;
+    /* Espacio entre "24/7" y las redes sociales */
+}
+
+.header-bottom {
+    /* No se necesitan estilos específicos aquí a menos que quieras agregar un margen, padding, etc. */
+    padding: 20px;
+
+}
+
+.header-logo {
+    width: 150px;
+    /* Ajusta esto según el tamaño deseado del logo */
+    height: auto;
+    /* Mantiene la proporción del logo */
+}
+
+
+/* Ajusta el logo y los elementos del header para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .header-logo {
+        width: 300px;
+    }
+
+    .header-section,
+    .header-center,
+    .header-center-u,
+    .header-center-union {
+        padding: 5px 5px;
+        font-size: 14px;
+    }
+}
+
+/* Animación de fondo */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+    background-size: 400% 400%;
+    animation: moveGradient 4s linear infinite;
+}
+
+.header-scrolled::before {
+    background: #ffffff !important;
+}
+
+/* Estilos para las secciones del header */
+.header-section {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    padding-right: 30px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Estilos para el centro del header */
+.header-center,
+.header-center-u,
+.header-center-union {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el texto del centro del header */
+.header-center p,
+.header-center-u p,
+.header-center-union p {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Estilos para los iconos de redes sociales */
+.header-center-union a {
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+/* Estilos para el botón de autenticación */
+.auth-button {
+    padding: 10px 20px;
+    background-color: #fe4c1c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.cotiza-buton {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #fe4c1c;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #fe4c1c;
+    /* Añade esta línea */
+    z-index: 1;
+}
+
+
+/* Estilos para los logos */
+.header-logo {
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.whatsapp-logo {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+/* Animación de fondo */
+@keyframes moveGradient {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+.auth-button {
+    padding: 10px 20px 10px 20px;
+    background-color: #fe4c1c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.header-logo,
+.whatsapp-logo,
+.auth-button {
+    z-index: 1;
+    /* Asegura que el contenido esté sobre el fondo animado */
+    /* Estilos específicos permanecen iguales */
+}
+
+/* Media query para hacer el header responsive */
+@media screen and (max-width: 768px) {
+    .header-logo {
+        width: 200px;
+    }
+
+    .whatsapp-logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .auth-button {
+        margin-top: 10px;
+    }
+
+    .header-responsive {
+        flex-direction: column;
+        font-family: 'Raleway', sans-serif;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        /* Cambiado a column para alinear los elementos verticalmente */
+        align-items: flex-start;
+    }
+
+
+
+
+
+}

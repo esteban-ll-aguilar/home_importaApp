@@ -24,7 +24,7 @@
     .header-center,
     .header-center-u,
     .header-center-union {
-        padding: 5px 10px;
+        padding: 5px 5px;
         font-size: 14px;
     }
 }
@@ -38,7 +38,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to right, #6c6c6c, #ada8a8, #6c6c6c, #ada8a8, #6c6c6c);
+    background: linear-gradient(to right, #ffffff, #fe4c1c, #ffffff, #ffffff, #ffffff);
     background-size: 400% 400%;
     animation: moveGradient 4s linear infinite;
 }

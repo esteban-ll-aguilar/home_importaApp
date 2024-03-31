@@ -1,0 +1,388 @@
+/* element.style {
+    display: block;
+    width: 745px;
+    height: 745px;
+}
+
+.MktRoot *,
+.MktRoot :after,
+.MktRoot :before {
+    box-sizing: border-box;
+}
+
+canvas[Attributes Style] {
+    aspect-ratio: auto 931 / 931;
+}
+
+user agent stylesheet canvas {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.BlogGlobe__globe {
+    display: flex;
+    justify-content: center;
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+.flavor--Chroma.theme--Dark,
+.flavor--Chroma .theme--Dark {
+    --blendForeground: #7a73ff;
+    --blendIntersection: #cff;
+    --blendBackground: #00d4ff;
+}
+
+.theme--Dark {
+    --backgroundColor: #0a2540;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #fff;
+    --linkHoverOpacity: 1;
+    --buttonColor: var(--accentColor);
+    --buttonHoverColor: #fff;
+    --buttonDisabledColor: #6b7c93;
+    --buttonHoverOpacity: 1;
+    --buttonDisabledOpacity: 0.7;
+    --knockoutColor: #0a2540;
+    --knockoutDisabledColor: #e6ebf1;
+    --guideSolidColor: rgba(66, 71, 112, 0.3);
+    --guideDashedColor: rgba(66, 71, 112, 0.3);
+    --titleColor: #fff;
+    --textColor: #adbdcc;
+    --formFieldDescriptionTextColor: #adbdcc;
+    --inputBackground: #0c2e4e;
+    --checkboxInputBackground: #0c2e4e;
+    --inputBackgroundAlt: #274869;
+    --inputPlaceholderColor: #b6c2cd;
+    --inputTextColor: #fff;
+    --inputErrorAccentColor: #ff5996;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #fff;
+    --navHoverColor: #fff;
+    --navHoverOpacity: 0.6;
+    --footerColor: #fff;
+    --cardBorderColor: #0f395e;
+    --cardBackground: #0c2e4e;
+    --subcardBackground: #1f4468;
+    --gridSubcardBackground: #1f4468;
+    --tableIconColor: #8c9eb1;
+    --stripeAccentWhite: #fff;
+    --stripeAccentLight: #fff;
+    --stripeAccentDark: #0c2e4e;
+    --bulletColor: #6b7c93;
+    --footnoteTextColor: #adbdcc;
+    --disclaimerTextColor: #707f98;
+    --inlineCodeTextColor: #fff;
+    --inlineCodeBackground: #1c4161;
+    --socialLogoColor: #707f98;
+    --socialLogoHoverColor: #fff;
+}
+
+.Card {
+    --cardBleedRightNormal: var(--columnWidth);
+    --cardBleedBottomNormal: 16px;
+    --cardShadow: none;
+    --cardShadowMargin: 0;
+    --cardMinHeight: 72px;
+    position: relative;
+    min-width: 100px;
+    min-height: var(--cardMinHeight);
+    max-width: var(--cardMaxWidth, none);
+    margin-right: calc(var(--cardBleedRight, 0)* -1);
+    margin-bottom: calc(var(--cardBleedBottom, 0)* -1);
+    border-radius: var(--cardBorderRadius);
+    background: var(--cardBackground);
+    box-shadow: var(--cardShadow);
+    overflow: hidden;
+}
+
+.BlogPost.Section {
+    --sectionPaddingTop: 0;
+}
+
+.theme--White {
+    --backgroundColor: #fff;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #0a2540;
+    --buttonColor: var(--accentColor);
+    --buttonHoverColor: #0a2540;
+    --buttonDisabledColor: #cfd7df;
+    --buttonDisabledOpacity: 0.7;
+    --knockoutColor: #fff;
+    --knockoutDisabledColor: #8898aa;
+    --guideSolidColor: rgba(66, 71, 112, 0.06);
+    --guideDashedColor: rgba(66, 71, 112, 0.09);
+    --titleColor: #0a2540;
+    --textColor: #425466;
+    --formFieldDescriptionTextColor: #3f4b66;
+    --inputBackground: #f6f9fc;
+    --checkboxInputBackground: #e7ecf1;
+    --inputPlaceholderColor: #727f96;
+    --inputTextColor: #0a2540;
+    --inputErrorAccentColor: #ff5996;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #0a2540;
+    --navHoverColor: #0a2540;
+    --navHoverOpacity: 0.6;
+    --footerColor: #0a2540;
+    --cardBorderColor: #cbd6e0;
+    --cardBackground: #fff;
+    --subcardBackground: #f6f9fc;
+    --gridSubcardBackground: #f6f9fc;
+    --tableIconColor: #8c9eb1;
+    --stripeAccentWhite: #fff;
+    --stripeAccentLight: #e3e7ec;
+    --stripeAccentDark: #0a2540;
+    --bulletColor: #cfd7df;
+    --footnoteTextColor: #4d5b78;
+    --disclaimerTextColor: #707f98;
+    --inlineCodeTextColor: #2c3a57;
+    --inlineCodeBackground: #e6ecf2;
+    --socialLogoColor: #c4ccd8;
+    --socialLogoHoverColor: #0a2540;
+}
+
+.Section {
+    --sectionAnglePaddingTopBase: calc(var(--sectionAnglePaddingBaseMin)* 1px +(var(--sectionAnglePaddingTopBaseMax) - var(--sectionAnglePaddingBaseMin))*(var(--windowWidth) / 737 - 0.50882px));
+    --sectionAnglePaddingBottomBase: calc(var(--sectionAnglePaddingBaseMin)* 1px +(var(--sectionAnglePaddingBottomBaseMax) - var(--sectionAnglePaddingBaseMin))*(var(--windowWidth) / 737 - 0.50882px));
+    --sectionPaddingTopGutterWidth: var(--gutterWidth);
+    --sectionAnglePaddingTop: calc(var(--sectionAngleHeight) - var(--sectionAngleSin)* var(--sectionPaddingTopGutterWidth) + var(--sectionAnglePaddingTopBase));
+    --sectionAnglePaddingBottom: calc(var(--sectionAngleHeight) - var(--sectionAngleSin)* var(--gutterWidth) + var(--sectionAnglePaddingBottomBase));
+    --sectionPaddingTop: calc(var(--sectionPaddingMin)* 1px +(var(--sectionPaddingTopMax) - var(--sectionPaddingMin))*(var(--windowWidth) / 737 - 0.50882px));
+    --sectionPaddingBottom: calc(var(--sectionPaddingMin)* 1px +(var(--sectionPaddingBottomMax) - var(--sectionPaddingMin))*(var(--windowWidth) / 737 - 0.50882px));
+}
+
+.Section--hasStickyNav {
+    --sectionOverflow: visible;
+}
+
+.HubPage .Section,
+.Section {
+    --sectionPaddingNormalMax: 128;
+}
+
+.Section {
+    --sectionAngleSin: var(--angleNormalSin);
+    --sectionAngle: 0;
+    --sectionPaddingSmallMax: 110;
+    --sectionPaddingXSmallMax: 72;
+    --sectionPaddingMin: 72;
+    --sectionPaddingMax: var(--sectionPaddingNormalMax);
+    --sectionPaddingTopMax: var(--sectionPaddingMax);
+    --sectionPaddingBottomMax: var(--sectionPaddingMax);
+    --sectionMarginBottom: 0;
+    --sectionAngleHeight: calc(var(--windowWidth)* var(--sectionAngleSin));
+    --sectionAnglePaddingBaseMin: 100;
+    --sectionAnglePaddingBaseMax: var(--sectionPaddingMax);
+    --sectionAnglePaddingTopBaseMax: var(--sectionAnglePaddingBaseMax);
+    --sectionAnglePaddingBottomBaseMax: var(--sectionAnglePaddingBaseMax);
+    --sectionAngleMaxHeight: none;
+    --sectionOverflow: hidden;
+    --sectionTransformOrigin: 100% 0;
+    --sectionBackgroundOverflow: visible;
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--sectionMarginBottom);
+    color: var(--textColor);
+    scroll-margin-top: calc(var(--fixedNavHeight) + var(--fixedNavSpacing) - var(--sectionPaddingTop));
+}
+
+.flavor--Chroma.accent--Blurple,
+.flavor--Chroma .accent--Blurple {
+    --accentColor: #635bff;
+    --guideBackground: #5d69e3;
+    --guideDarkColor: #4d5ae0;
+    --guideLightColor: #6772e5;
+    --guideLighterColor: #7a84e9;
+    --guideLightestColor: #8d95ec;
+}
+
+.flavor--Chroma {
+    --blendBackground: #80e9ff;
+    --blendIntersection: #0048e5;
+    --blendForeground: #7a73ff;
+    --gradientColorZero: #a960ee;
+    --gradientColorOne: #ff333d;
+    --gradientColorTwo: #90e0ff;
+    --gradientColorThree: #ffcb57;
+    --gradientColorZeroTransparent: rgba(169, 96, 238, 0);
+    --gradientColorOneTransparent: rgba(255, 51, 61, 0);
+    --gradientColorTwoTransparent: rgba(144, 224, 255, 0);
+    --gradientColorThreeTransparent: rgba(255, 203, 87, 0);
+    --shadeOneColor: #02bcf5;
+    --shadeTwoColor: #0073e6;
+    --shadeThreeColor: #003ab9;
+    --shadeFourColor: #635bff;
+    --shadeFiveColor: #002c59;
+    --shadeSixColor: #09cbcb;
+}
+
+.MktBody {
+    margin: 0;
+    font-family: var(--fontFamily);
+    font-weight: var(--fontWeightNormal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--textColor);
+    background: var(--backgroundColor);
+}
+
+style attribute {
+    --scrollbarWidth: 0px;
+}
+
+.MktRoot {
+    --fontFamily: "sohne-var", "Helvetica Neue", "Arial", sans-serif;
+    --fontWeightLight: 200;
+    --fontWeightNormal: 300;
+    --fontWeightSemibold: 425;
+    --fontWeightBold: 500;
+    --systemFontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --codeFontFamily: "SourceCodePro";
+    --sourceCodeFont: 500 14px / 1.714285714 var(--codeFontFamily);
+    --ctaFont: var(--fontWeightSemibold) 15px / 1.6 var(--fontFamily);
+    --inputFont: var(--fontWeightNormal) 15px / 1.6 var(--fontFamily);
+    --cardShadowXSmall: 0 2px 5px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
+    --cardShadowSmall: 0 6px 12px -2px rgba(50, 50, 93, 0.25), 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+    --cardShadowMedium: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+    --cardShadowLarge: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+    --cardShadowLargeInset: inset 0 30px 60px -12px rgba(50, 50, 93, 0.25), inset 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+    --cardShadowXLarge: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+    --cardShadowXSMallMargin: 2px;
+    --cardShadowSmallMargin: 8px;
+    --cardShadowMediumMargin: 16px;
+    --cardShadowLargeMargin: 32px;
+    --cardShadowXLargeMargin: 48px;
+    --cardBorderRadius: 8px;
+    --filterShadowMedium: 0px 3px 11.5px -3.5px rgba(50, 50, 93, 0.25), 0px 3.8px 7.5px -3.7px rgba(0, 0, 0, 0.1);
+    --scrollbarOffset: 10px;
+    --angleNormal: -6deg;
+    --angleStrong: -12deg;
+    --angleNormalSin: 0.106;
+    --angleStrongSin: 0.212;
+    --modalZIndex: 999999;
+    --fixedNavHeight: 60px;
+    --fixedNavSpacing: 48px;
+    --fixedNavScrollMargin: calc(var(--fixedNavHeight) + var(--fixedNavSpacing));
+    --hoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    --focusBoxShadow: 0 0 0 2px #4d90fe, inset 0 0 0 2px hsla(0, 0%, 100%, 0.9);
+    color-scheme: only light;
+}
+
+injected stylesheet:root {
+    --lt-color-gray-100: #f8f9fc;
+    --lt-color-gray-200: #f1f3f9;
+    --lt-color-gray-300: #dee3ed;
+    --lt-color-gray-400: #c2c9d6;
+    --lt-color-gray-500: #8f96a3;
+    --lt-color-gray-600: #5e636e;
+    --lt-color-gray-700: #2f3237;
+    --lt-color-gray-800: #1d1e20;
+    --lt-color-gray-900: #111213;
+    --lt-shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+    --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1), 0 6px 20px -3px rgba(0, 0, 0, 0.2);
+    --lt-color-white: #fff !important;
+    --lt-color-black: #111213 !important;
+    --lt-color-transparent: rgba(255, 255, 255, 0) !important;
+    --lt-color-background-light: var(--lt-color-gray-100) !important;
+    --lt-color-background-default: var(--lt-color-gray-200) !important;
+    --lt-color-background-dark: var(--lt-color-gray-300) !important;
+    --lt-color-border-light: var(--lt-color-gray-200) !important;
+    --lt-color-border-default: var(--lt-color-gray-300) !important;
+    --lt-color-border-dark: var(--lt-color-gray-400) !important;
+    --lt-color-text-very-light: var(--lt-color-gray-500) !important;
+    --lt-color-text-light: var(--lt-color-gray-600) !important;
+    --lt-color-text-default: var(--lt-color-gray-700) !important;
+    --lt-color-text-dark: var(--lt-color-gray-800) !important;
+    --lt-color-overlay-default: #fff !important;
+    --lt-color-overlay-dark: #fff !important;
+    --lt-color-overlay-transparent: rgba(0, 0, 0, 0.1) !important;
+    --lt-shadow-website-overlay: 0 0 7px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+injected stylesheet:root {
+    --lt-color-gray-100: #f8f9fc;
+    --lt-color-gray-200: #f1f3f9;
+    --lt-color-gray-300: #dee3ed;
+    --lt-color-gray-400: #c2c9d6;
+    --lt-color-gray-500: #8f96a3;
+    --lt-color-gray-600: #5e636e;
+    --lt-color-gray-700: #2f3237;
+    --lt-color-gray-800: #1d1e20;
+    --lt-color-gray-900: #111213;
+    --lt-shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+    --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1), 0 6px 20px -3px rgba(0, 0, 0, 0.2);
+    --lt-color-white: #fff !important;
+    --lt-color-black: #111213 !important;
+    --lt-color-transparent: rgba(255, 255, 255, 0) !important;
+    --lt-color-background-light: var(--lt-color-gray-100) !important;
+    --lt-color-background-default: var(--lt-color-gray-200) !important;
+    --lt-color-background-dark: var(--lt-color-gray-300) !important;
+    --lt-color-border-light: var(--lt-color-gray-200) !important;
+    --lt-color-border-default: var(--lt-color-gray-300) !important;
+    --lt-color-border-dark: var(--lt-color-gray-400) !important;
+    --lt-color-text-very-light: var(--lt-color-gray-500) !important;
+    --lt-color-text-light: var(--lt-color-gray-600) !important;
+    --lt-color-text-default: var(--lt-color-gray-700) !important;
+    --lt-color-text-dark: var(--lt-color-gray-800) !important;
+    --lt-color-overlay-default: #fff !important;
+    --lt-color-overlay-dark: #fff !important;
+    --lt-color-overlay-transparent: rgba(0, 0, 0, 0.1) !important;
+    --lt-shadow-website-overlay: 0 0 7px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (min-width: 600px) html {
+    --columnPaddingMedium: 32px;
+    --columnPaddingLarge: 64px;
+    --columnPaddingXLarge: 64px;
+    --columnCountMax: 2;
+}
+
+html {
+    --gutterWidth: 16px;
+    --scrollbarWidth: 0px;
+    --windowWidth: calc(100vw - var(--scrollbarWidth));
+    --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth)* 2);
+    --layoutWidthMax: 1080px;
+    --viewportWidthSmall: 375;
+    --viewportWidthMedium: 600;
+    --viewportWidthLarge: 1112;
+    --viewportScale: calc(var(--windowWidth) / var(--viewportWidthLarge));
+    --paddingTop: 160px;
+    --paddingBottom: 160px;
+    --columnPaddingNone: 0;
+    --columnPaddingSmall: 8px;
+    --columnPaddingNormal: 16px;
+    --columnPaddingMedium: 16px;
+    --columnPaddingLarge: 16px;
+    --columnPaddingXLarge: 16px;
+    --rowGapNormal: 8px;
+    --rowGapMedium: 24px;
+    --rowGapLarge: 32px;
+    --rowGapXLarge: 64px;
+    --rowGapXXLarge: 88px;
+    --rowGap: var(--rowGapNormal);
+    --columnCountMax: 1;
+    --columnWidth: calc(var(--layoutWidth) / var(--columnCountMax));
+    --columnMaxWidth: calc(var(--layoutWidthMax)* 0.25);
+    --copyMaxWidth: calc(var(--columnMaxWidth)* 3);
+}
+
+.MktRoot *,
+.MktRoot :after,
+.MktRoot :before {
+    box-sizing: border-box;
+}
+
+.MktRoot *,
+.MktRoot :after,
+.MktRoot :before {
+    box-sizing: border-box;
+} */

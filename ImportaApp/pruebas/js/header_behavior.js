@@ -8,7 +8,7 @@ $(document).ready(function () {
         } else {
             $('.header').removeClass('header-scrolled');
             // Volver al logo original cuando se está en la parte superior de la página
-            $('.header-logo').attr('src', 'images/Logo Transparente letra blanca.png');
+            $('.header-logo').attr('src', 'images/Logo Blanco letra negra.png');
         }
     });
 });

@@ -1,0 +1,48 @@
+/* TODO: HACER QUE LOS BOTONES ESTEN EN EXTREMOS */
+.propuesta-valor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.propuesta-valor p {
+    font-family: 'Raleway', sans-serif;
+    justify-content: center;
+    /* Centra los elementos hijos horizontalmente */
+    flex-wrap: wrap;
+}
+
+.cotiza_propuesta_valor {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    width: 300px;
+    align-items: center;
+    /* align-items: flex-start; */
+}
+
+.cotiza_propuesta_valor_button {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fe4c1c;
+    transition: background-color 0.3s;
+}
+
+.cotiza_propuesta_valor_button strong {
+
+    color: white;
+}
+
+.cotiza_propuesta_valor_button:hover {
+    background-color: #e5172a;
+}
+
+.logo_img_propuesta_valor {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}

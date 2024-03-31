@@ -1,0 +1,19 @@
+.map-container {
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    padding: 0px 0;
+    z-index: -1;
+    /* Espaciado arriba y abajo para separación */
+}
+
+#map {
+    height: 400px;
+    /* Altura del mapa */
+    width: 80%;
+    /* Ancho del mapa, ajustable según prefieras */
+    max-width: 1000px;
+    /* Máximo ancho del mapa */
+}

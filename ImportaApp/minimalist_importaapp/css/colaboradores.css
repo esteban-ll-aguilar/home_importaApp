@@ -1,0 +1,51 @@
+.colaboradores {
+    text-align: center;
+    width: 100%;
+}
+
+.colaboradores h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.logos_colaboradores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.logos_colaboradores div {
+    flex: 0 0 auto;
+    padding: 0 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.logo-img {
+    max-width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+    .logos_colaboradores div {
+        flex: 0 0 33.33%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .logos_colaboradores div {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .logos_colaboradores div {
+        flex: 0 0 100%;
+    }
+
+    .logo-img {
+        max-width: 100px;
+    }
+}

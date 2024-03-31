@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Globo Terrestre con Conexiones</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, earth, lineObjects = []; // Inicializa lineObjects como un array vacío aquí
+
+
+        function init() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xffffff); // Fondo blanco
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            const geometry = new THREE.SphereGeometry(1, 32, 32);
+            const textureLoader = new THREE.TextureLoader();
+            textureLoader.load('images/map.png', function (texture) {
+                const material = new THREE.MeshBasicMaterial({ map: texture });
+                earth = new THREE.Mesh(geometry, material);
+                scene.add(earth);
+
+                addLines();
+                animate();
+            }, undefined, function (error) {
+                console.error("Error loading texture:", error);
+            });
+
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            if (earth) {
+                earth.rotation.y += 0.002;
+            }
+
+            // Animación de las líneas
+            lineObjects.forEach((lineObject) => {
+                const line = lineObject.line;
+                const drawCount = line.geometry.drawRange.count;
+                if (drawCount < line.geometry.attributes.position.count) {
+                    line.geometry.setDrawRange(0, drawCount + 1);
+                }
+            });
+
+            renderer.render(scene, camera);
+        }
+
+        function addLines() {
+            const locations = {
+                quito: { lat: -0.180653, lng: -78.467838 },
+                china: { lat: 35.86166, lng: 104.195397 },
+                usa: { lat: 37.09024, lng: -95.712891 },
+                colombia: { lat: 4.570868, lng: -74.297333 }
+            };
+
+            function latLngToVector3(lat, lng, radius) {
+                const phi = (90 - lat) * (Math.PI / 180);
+                const theta = (lng + 180) * (Math.PI / 180);
+                return new THREE.Vector3(
+                    -radius * Math.sin(phi) * Math.cos(theta),
+                    radius * Math.cos(phi),
+                    radius * Math.sin(phi) * Math.sin(theta)
+                );
+            }
+
+            function addLine(from, to, color) {
+                const start = latLngToVector3(from.lat, from.lng, 1);
+                const end = latLngToVector3(to.lat, to.lng, 1);
+                const control = new THREE.Vector3((start.x + end.x) / 2, 1.5, (start.z + end.z) / 2);
+                const curve = new THREE.CubicBezierCurve3(start, control, control, end);
+
+                const points = curve.getPoints(50);
+                const geometry = new THREE.BufferGeometry().setFromPoints(points);
+                const material = new THREE.LineBasicMaterial({ color: color });
+
+                const line = new THREE.Line(geometry, material);
+                line.geometry.setDrawRange(0, 0); // Inicializa el rango de dibujo para animación
+                scene.add(line);
+
+                // Guarda el objeto de línea para la animación
+                lineObjects.push({ line });
+            }
+
+            addLine(locations.quito, locations.china, 0xff0000);
+            addLine(locations.quito, locations.china, 0xff0000); // Rojo
+            addLine(locations.quito, locations.usa, 0x00ff00); // Verde
+            addLine(locations.colombia, locations.china, 0x0000ff); // Azul
+            addLine(locations.colombia, locations.usa, 0xffff00); // Amarillo
+            addLine(locations.quito, locations.colombia, 0xff00ff); // Magenta
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        init();
+    </script>
+</body>
+
+</html>

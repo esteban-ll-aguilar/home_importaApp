@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "pruebas",
+    "public": "minimalist_importaapp",
     "ignore": [
       "firebase.json",
       "**/.*",
