@@ -149,28 +149,42 @@
 }
 
 /* Media queries */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .planet-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
+    .planet-container h1 {
+        font-size: 3.3rem;
+
+    }
+
     .text-container {
         width: 50%;
-        padding: 60px 30px 60px 30px;
+        padding: 20px 20px 20px 30px;
         align-items: start;
     }
 
     .div_planeta {
-        width: 50%;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .text-container h1 {
-        font-size: 1.5rem;
+    .planet-container h1 {
+        font-size: 2rem;
     }
+
+    .planet-container {
+        padding-top: 35px;
+        flex-direction: column;
+        align-items: start;
+        padding-right: 70px;
+        padding-left: 20px;
+    }
+
 }
 
 .titulos {

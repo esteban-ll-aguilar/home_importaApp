@@ -72,11 +72,9 @@
     transition: background-color 0.3s;
     background-color: transparent;
     display: flex;
+    padding-right: 70px;
     flex-direction: row;
     justify-content: flex-end;
-    /* Cambiado a column para alinear los elementos verticalmente */
-
-    /* Alinea los elementos a la izquierda */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -152,11 +150,11 @@
 /* Estilos para las secciones del header */
 .header-section {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: flex-start;
-    padding-right: 30px;
     font-weight: bold;
     z-index: 1;
+    padding-right: 10px;
 }
 
 /* Estilos para el centro del header */
@@ -207,7 +205,7 @@
 .header-logo {
     width: 250px;
     height: auto;
-    margin-right: 10px;
+
 }
 
 .whatsapp-logo {
@@ -249,7 +247,7 @@
 /* Media query para hacer el header responsive */
 @media screen and (max-width: 768px) {
     .header-logo {
-        width: 200px;
+        width: 190px;
     }
 
     .whatsapp-logo {
@@ -257,21 +255,123 @@
         height: 25px;
     }
 
+
+
     .auth-button {
         margin-top: 10px;
     }
 
-    .header-responsive {
-        flex-direction: column;
-        font-family: 'Raleway', sans-serif;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
 
-        /* Cambiado a column para alinear los elementos verticalmente */
-        align-items: flex-start;
+
+    .row-button {
+
+
+        /* width: 100%; */
+
+        z-index: 1000;
+        transition: background-color 0.3s;
+        background-color: transparent;
+
+        flex-direction: column;
+        align-items: center;
+        padding-right: 35px;
+        font-family: 'Raleway', sans-serif;
     }
 
+    .column-log {
+
+
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .row-log {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s;
+        background-color: transparent;
+
+        flex-direction: row;
+        align-items: center;
+        /* Cambiado a column para alinear los elementos verticalmente */
+        align-items: flex-start;
+        /* Alinea los elementos a la izquierda */
+        padding-top: 20px;
+        padding-left: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+    .header-responsive {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0px;
+        padding-top: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .header-bottom {
+        /* No se necesitan estilos específicos aquí a menos que quieras agregar un margen, padding, etc. */
+        padding-left: 13px;
+        padding-top: 15px;
+        padding-right: 3px;
+        padding: disabled;
+
+    }
+
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .cotiza-buton {
+        padding: 5px 5px;
+        background-color: #ffffff;
+        color: #fe4c1c;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 10px;
+        border: 1px solid #fe4c1c;
+        /* Añade esta línea */
+        z-index: 1;
+    }
+
+
+    .auth-button {
+        padding: 5px 10px;
+        background-color: #fe4c1c;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        z-index: 1;
+    }
 
 
 
