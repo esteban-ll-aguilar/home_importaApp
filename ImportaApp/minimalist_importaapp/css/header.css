@@ -80,3 +80,28 @@
     }
     
 }
+
+@media screen and (max-width: 358px) {
+    .header {
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    .header-logo {
+        width: 100px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    }
+
+    .row-log {
+        flex-direction: column; /* Cambia la dirección del flexbox para apilar los elementos verticalmente */
+        padding: 5px 0; /* Reduce el padding entre los elementos */
+    }
+
+    .header-img-bottom {
+        padding: 5px 0; /* Reduce el padding entre los elementos */
+    }
+
+    .cotiza-buton,
+    .auth-button {
+        padding: 5px 8px; /* Reduce el padding de los botones */
+        font-size: 12px; /* Ajusta el tamaño de la fuente de los botones */
+    }
+}
