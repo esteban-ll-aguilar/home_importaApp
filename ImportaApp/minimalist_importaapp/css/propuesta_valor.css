@@ -15,7 +15,7 @@
     display: inline-block;
     margin: 20px;
     cursor: pointer;
-    width: 300px;
+    width: 270px;
     align-items: center;
     /* align-items: flex-start; */
 }
@@ -23,14 +23,17 @@
 .cotiza_propuesta_valor_button {
     display: flex;
     justify-content: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    /* Peso de la fuente medio para hacer la letra más fina */
     align-items: center;
-    padding: 25px;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fe4c1c;
     transition: background-color 0.3s;
 }
+
 
 .cotiza_propuesta_valor_button strong {
 

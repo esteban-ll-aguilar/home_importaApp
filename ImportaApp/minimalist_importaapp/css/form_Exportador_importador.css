@@ -1,16 +1,26 @@
-h1,h2 {
+h1,
+h2 {
     font-family: 'Montserrat', sans-serif;
 }
+
 label {
     font-family: 'Raleway', sans-serif;
 }
+
 body {
     margin: 0;
     padding: 0;
 }
-select, input{
+
+select,
+input {
     /*en negrita*/
     font-weight: bold;
+}
+
+input,
+select {
+    font-family: 'Raleway', sans-serif;
 }
 
 .container {
@@ -21,6 +31,7 @@ select, input{
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h2 {
     text-align: center;
     color: #333;
@@ -69,21 +80,25 @@ input[type="submit"]:hover {
         max-width: 300px;
         padding: 10px;
     }
+
     input[type="submit"] {
         padding: 8px 12px;
         font-size: 0.9em;
     }
 }
+
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 360px) {
     .container {
         max-width: 280px;
         padding: 8px;
     }
+
     input[type="submit"] {
         padding: 6px 10px;
         font-size: 0.8em;
     }
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -91,6 +106,7 @@ input[type="submit"]:hover {
         padding: 8px;
         font-size: 0.9em;
     }
+
     label {
         font-size: 0.9em;
     }
