@@ -1,6 +1,6 @@
 /* Sección de beneficios */
 .benefitsSection {
-    background: linear-gradient(-25deg, #ffffff,#ebe9e9,#fedbdb, #e07474, #d72424);
+    background: linear-gradient(0deg, #ffffff, #ebe9e9, #fedbdb, #e07474, #d72424);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,7 @@
     font-size: 2.5em;
     margin-bottom: 20px;
 }
+
 .benefitsSection p {
     margin-bottom: 20px;
     font-family: 'Raleway', sans-serif;
@@ -24,7 +25,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
+    max-width: 900px;
     margin-top: 20px;
 }
 
@@ -37,8 +38,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 10px;
     text-align: center;
-    flex: 0 0 30%; /* Ajuste para que todos tengan el mismo ancho */
-    max-width: 30%; /* Ajuste para que todos tengan el mismo ancho */
+    flex: 0 0 30%;
+    /* Ajuste para que todos tengan el mismo ancho */
+    max-width: 30%;
+    /* Ajuste para que todos tengan el mismo ancho */
 }
 
 /* Destacado de beneficios */
@@ -52,7 +55,7 @@
 .benefitsImage {
     margin-top: 50px;
     width: 400px;
-    height: 400px;
+    height: auto;
     border-radius: 10%;
 }
 
@@ -61,6 +64,7 @@
     .benefitsSection {
         padding: 10px;
     }
+
     .benefitsSection h1 {
         font-size: 2em;
     }
@@ -71,8 +75,10 @@
     }
 
     .benefitBox {
-        flex: 0 0 45%; /* Ajuste para pantallas más pequeñas */
-        max-width: 45%; /* Ajuste para pantallas más pequeñas */
+        flex: 0 0 45%;
+        /* Ajuste para pantallas más pequeñas */
+        max-width: 45%;
+        /* Ajuste para pantallas más pequeñas */
         padding: 15px;
         margin: 5px;
     }
@@ -80,4 +86,13 @@
     .benefitHighlight {
         font-size: 1.5em;
     }
+
+    /* Imagen de beneficios */
+    .benefitsImage {
+        margin-top: 50px;
+        width: 300px;
+        height: auto;
+        border-radius: 10%;
+    }
+
 }

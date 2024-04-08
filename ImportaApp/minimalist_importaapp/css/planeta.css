@@ -9,122 +9,117 @@
     margin-top: 40px;
     top: 0px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 40px;
-    height: 100vh;
+    padding-right: 30px;
+    padding-left: 50px;
+    padding-top: 40px;
     overflow: hidden;
 }
 
 .planet-container h1 {
-    font-size: 3.3rem;
-    /* Ajusta este valor según necesites */
-    font-weight: bold;
-    /* Hace que todo el texto sea negrita */
+    font-size: 3.4rem;
+    font-weight: 900;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
 .highlight {
     color: red;
-    /* Cambia el color de 'ser un experto' a rojo */
-}
-
-/* Fondo animado */
-.animated-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
-    background-size: 400% 400%;
-    animation: moveGradient 4s linear infinite;
-}
-
-.row-button-planet-text {
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    /* Cambiado a column para alinear los elementos verticalmente */
-
-    /* Alinea los elementos a la izquierda */
-    font-family: 'Raleway', sans-serif;
-}
-
-
-/* Texto */
-.text-container-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Asegura que los elementos estén en columna y alineados a la izquierda */
-    padding-left: 40px;
-    /* Ajusta según lo necesites */
-}
-
-.text-container-left h1 {
-    margin: 0 0 10px 0;
-    /* Añade un margen debajo para separar del párrafo 'fácil' */
-    font-weight: bold;
-    /* Hace el texto negrita */
-    font-size: 3rem;
-    /* Aumenta el tamaño del texto, ajusta según lo necesites */
-}
-
-
-.text-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Alinea los textos a la izquierda */
-    padding-left: 20px;
-    /* Espacio desde el lado izquierdo */
-}
-
-.text-group h1 {
-    font-size: 3.3rem;
-    /* Ajusta el tamaño del texto según sea necesario */
-    font-weight: bold;
-    /* Hace que el texto sea negrita */
-    margin-bottom: 0.5em;
-    /* Espacio entre 'Importa y exporta' y 'fácil' */
-}
-
-
-
-.facil {
-    color: red;
-    /* Aplica el color rojo al texto "fácil" */
-    font-weight: bold;
-    /* Opcional: Si también deseas que "fácil" sea negrita */
-    font-size: 5rem;
-    font-family: 'Raleway', sans-serif;
-    /* Aumenta el tamaño del texto, ajusta según lo necesites */
-}
-
-
-.div_planeta img {
-    width: auto;
-    max-width: 100%;
-    /* Asegúrate de que la imagen no sobrepase el contenedor */
-    height: auto;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Imagen del planeta */
-.div_planeta img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin-top: 20px;
+.div_planeta img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
+
+
+
+
+@media screen and (max-width: 432px) {
+    .planet-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+        padding-left: 20px;
+        padding-top: 90px;
+        padding-bottom: 0px;
+    }
+
+    .planet-container h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .highlight {
+        color: red;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .div_planeta img {
+        width: 350px;
+    }
+
+    /* Imagen del planeta */
+    .div_planeta img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+}
+
+
+@media screen and (min-width: 433px) and (max-width: 767px) {
+    .planet-container {
+        margin-top: 40px;
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding-right: 10px;
+        padding-left: 20px;
+        padding-top: 80px;
+        overflow: hidden;
+    }
+
+    .planet-container h1 {
+        font-size: 2.4rem;
+        font-weight: 900;
+
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .highlight {
+        color: red;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .div_planeta img {
+        width: 320px;
+    }
+
+    /* Imagen del planeta */
+    .div_planeta img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+}
+
 
 /* Animación de fondo */
 @keyframes moveGradient {
@@ -146,48 +141,4 @@
     100% {
         transform: translateX(-100%);
     }
-}
-
-/* Media queries */
-@media screen and (min-width: 769px) {
-    .planet-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .planet-container h1 {
-        font-size: 3.3rem;
-
-    }
-
-    .text-container {
-        width: 50%;
-        padding: 20px 20px 20px 30px;
-        align-items: start;
-    }
-
-    .div_planeta {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .planet-container h1 {
-        font-size: 2rem;
-    }
-
-    .planet-container {
-        padding-top: 35px;
-        flex-direction: column;
-        align-items: start;
-        padding-right: 70px;
-        padding-left: 20px;
-    }
-
-}
-
-.titulos {
-    display: flex;
-    animation: scroll 20s linear infinite;
 }
