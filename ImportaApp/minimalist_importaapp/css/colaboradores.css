@@ -4,8 +4,10 @@
 }
 
 .colaboradores h1 {
-    font-weight: bold;
+    font-weight: 900;
     margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .logos_colaboradores {
