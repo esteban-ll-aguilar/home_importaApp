@@ -10,7 +10,7 @@
 
 /* Título de beneficios */
 .benefitsSection h1 {
-    font-size: 2.5em;
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
 
@@ -22,10 +22,11 @@
 /* Contenedor de contenido de beneficios */
 .benefitsContentWrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: row;
     justify-content: space-around;
     align-items: center;
-    max-width: 900px;
+    max-width: 1000px;
+    height: 120;
     margin-top: 20px;
 }
 
@@ -39,25 +40,18 @@
     margin: 10px;
     text-align: center;
     flex: 0 0 30%;
-    /* Ajuste para que todos tengan el mismo ancho */
-    max-width: 30%;
+    height: 33%;
+    align-items: center;
     /* Ajuste para que todos tengan el mismo ancho */
 }
 
 /* Destacado de beneficios */
 .benefitHighlight {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0;
     color: #e5172a;
 }
 
-/* Imagen de beneficios */
-.benefitsImage {
-    margin-top: 50px;
-    width: 400px;
-    height: auto;
-    border-radius: 10%;
-}
 
 /* Media queries para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
@@ -93,6 +87,15 @@
         width: 300px;
         height: auto;
         border-radius: 10%;
+    }
+
+    .benefitsContentWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+
     }
 
 }

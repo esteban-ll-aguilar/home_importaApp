@@ -31,7 +31,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
             "RUC de la Empresa: " + ruc + "\n" +
             "Servicio que Ofrece: " + servicio_ofrecido;
 
-        var whatsappLink = "https://wa.me/593959736777?text=" + encodeURIComponent(mensaje);
+        var whatsappLink = "https://wa.me/593980029920?text=" + encodeURIComponent(mensaje);
         window.location.href = whatsappLink;
     }
 

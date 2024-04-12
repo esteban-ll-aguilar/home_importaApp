@@ -12,15 +12,13 @@ function showDialogue() {
             popperInstance.destroy();
         }
         popperInstance = createPopper(interaction, dialogue, {
-            placement: "top", // Posicionar el diálogo encima del osito
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [0, 10], // Ajustar el desplazamiento vertical
-                    },
+            placement: "top",
+            modifiers: [{
+                name: 'offset',
+                options: {
+                    offset: [0, 10],
                 },
-            ],
+            }],
         });
     }, 50);
     isDialogueVisible = true;
@@ -38,10 +36,21 @@ function hideDialogue() {
     isDialogueVisible = false;
 }
 
-interaction.addEventListener("click", function() {
+interaction.addEventListener('click', function (event) {
+    event.stopPropagation();
     if (isDialogueVisible) {
         hideDialogue();
     } else {
         showDialogue();
+    }
+});
+
+dialogue.addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+
+document.addEventListener('click', function (event) {
+    if (!dialogue.contains(event.target) && isDialogueVisible) {
+        hideDialogue();
     }
 });

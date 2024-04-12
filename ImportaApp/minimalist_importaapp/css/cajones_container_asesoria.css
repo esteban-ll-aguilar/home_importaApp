@@ -1,0 +1,198 @@
+.cajones_container_asesoria {
+    max-width: 1200px;
+    width: 100%;
+    /* Asegúrate de que ocupe todo el ancho */
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos hijos horizontalmente */
+    justify-content: center;
+    /* Centra los elementos hijos verticalmente */
+}
+
+.cajones_container_asesoria h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    /* Asegura que el texto esté centrado horizontalmente */
+}
+
+
+.sub_cajones_container_asesoria {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+
+
+.cajones-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    /* Para alinear los cajones en fila */
+    flex-wrap: wrap;
+    /* Permite que los cajones pasen a la siguiente línea en pantallas pequeñas */
+    justify-content: space-around;
+    /* Distribuye el espacio entre los cajones de manera uniforme */
+}
+
+.sub_cajones_container_asesoria {
+    flex-wrap: wrap;
+}
+
+.cajon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E5172A;
+    border-radius: 10px;
+    margin: 20px;
+    width: 350px;
+    height: 20%;
+    background-color: #ffffff;
+}
+
+
+.cajon i {
+    color: #E5172A;
+    padding: 40px;
+}
+
+.cajon img {
+    padding: 10px;
+}
+
+/* 
+.cajon img.red-filter {
+    filter: invert(20%) sepia(100%) saturate(7500%) hue-rotate(-360deg) brightness(100%) contrast(105%);
+} */
+
+.cajon img.grey-filter {
+    filter: grayscale(100%) brightness(60%) contrast(105%);
+}
+
+
+
+.cajon_intermedio {
+    display: flex;
+    /* Usa flexbox para alinear el contenido */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    width: 100%;
+    height: 100px;
+    /* Ajusta la altura según sea necesario */
+    background-image: linear-gradient(to right, #e5172a -10%, #e5172a 50%);
+    /* De blanco a rojo */
+}
+
+.cajon_intermedio h3 {
+    margin: 0;
+    /* Elimina los márgenes predeterminados para asegurar el centrado */
+    text-align: center;
+    /* Asegura el centrado del texto horizontalmente */
+    color: white;
+    font-size: 1.5rem;
+    /* Ajusta el tamaño de la fuente según sea necesario */
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+.texto {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    margin-top: 20px;
+    /* Espacio entre el título y el texto */
+}
+
+.texto p {
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    /* font-size: 1.2rem; */
+    color: black;
+}
+
+.texto_2 {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    margin-top: 15px;
+    /* Espacio entre el título y el texto */
+}
+
+.texto_2 p {
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    /* font-size: 1.2rem; */
+    color: black;
+}
+
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    .cajones_container_asesoria {
+
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cajones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cajon {
+        width: 260px;
+        height: 400px;
+        /* Hace que los cajones ocupen el ancho completo del contenedor en pantallas pequeñas */
+    }
+
+    .texto p {
+        padding: 20px;
+        font-family: 'Raleway', sans-serif;
+        text-align: justify;
+        color: black;
+    }
+
+    .cajon_intermedio h3 {
+        margin: 0;
+        /* Elimina los márgenes predeterminados para asegurar el centrado */
+        text-align: center;
+        /* Asegura el centrado del texto horizontalmente */
+        color: white;
+        font-size: 1.2rem;
+        /* Ajusta el tamaño de la fuente según sea necesario */
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+    .cajon img,
+    .texto {
+        width: 100%;
+    }
+
+    .texto {
+        padding: 10px 0;
+        /* Ajusta el padding para dispositivos móviles */
+    }
+}

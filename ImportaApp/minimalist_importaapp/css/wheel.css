@@ -1,0 +1,27 @@
+.wheel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    flex: 0 0 33.33%;
+    /* each section will take up 1/3 of the container width */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    min-height: 150px;
+    /* or whatever height you want */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .section {
+        flex: 0 0 100%;
+        /* each section will take up full width on small screens */
+    }
+}
